@@ -1,0 +1,4 @@
+/* pages/my/suggest/suggest.wxss */
+page{
+  background: #eee
+}

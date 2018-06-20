@@ -1,0 +1,72 @@
+
+<!-- 总体评价 -->
+<view class=" w690 h100 mgLeft30 mgTop30  fs36">
+  <view class='fl w150 lh80'>总体评价</view>
+  <view class="w350 fl  h80" >
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{xing}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{xing}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{xing}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{xing}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{xing}}"></image>
+  </view>
+  <view class="w115 fr lh80 tr" >一般</view>
+</view>
+<view class="w720 mgLeft30 mgTop10 btmLine-ccc"></view>
+<!-- 口味 -->
+<view class=" w690 h80 mgLeft30 mgTop30  fs36">
+  <view class='fl w80 lh80'>口味</view>
+  <view class="w350 fl h80">
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{smil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{smil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{smil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{smil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{smil}}"></image>
+  </view>
+  <view class="w115 fr lh80 tr" >超好吃</view>
+</view>
+<!-- 环境 -->
+<view class=" w690 h80 mgLeft30 mgTop30  fs36">
+  <view class='fl w80 lh80'>环境</view>
+  <view class="w350 fl h80">
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+  </view>
+</view>
+<!-- 服务 -->
+<view class=" w690 h80 mgLeft30 mgTop30  fs36">
+  <view class='fl w80 lh80'>服务</view>
+  <view class="w350 fl h80">
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+    <image class='w50 h50 mgLeft20 mgTop15' src="{{nosmil}}"></image>
+  </view>
+</view>
+<!-- 分割线 -->
+<view class='h5 bg-eee mgTop30'></view>
+<!-- 人均价格 -->
+<view class='w690 mgLeft30 mgTop30 fs36'>
+  <text class='fl' decode='true' space='true'>人均&nbsp;¥&nbsp;</text>
+  <input class=' fl  w200' type='number' maxlength='8'></input>
+</view>
+<view class='clearB'></view>
+<!-- 评价内容 -->
+<view class="w690 mgLeft30 mgTop30 psnR">
+  <view class="h20"></view>
+  <textarea class='w650 fs30 lh40 mgLeft20 h200' name="content" bindinput='cont'  placeholder='菜品口味，环境卫生，服务态度？'></textarea>
+  <text class='fc-ccc fs26 psnA bottom0 right30'>不超过80字</text>
+</view>
+<view class='h5 bg-eee mgTop30'></view>
+<view class='w690 mgLeft30 h80 lh80  '>请上传图片</view>
+<view class='w690 mgLeft30'>
+  <view class='fl '>
+    <block wx:for="{{upImg}}" wx:key="index">
+      <image class='fl mgLeft30 mgTop20 w190 h190 lh190 fs60 fc-ccc border-ccc tc' src="{{item}}"></image>
+    </block>
+  </view>
+  <view class='fl mgLeft30 mgTop20 w190 h190 lh190 fs60 fc-ccc border-ccc tc' bindtap='uploadImg'>+</view>
+</view>

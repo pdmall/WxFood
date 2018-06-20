@@ -1,0 +1,16 @@
+<view class='w690 h80 lh80 mgLeft30 mgTop10 fs30 '>
+  <text>你可兑换的金豆</text>
+  <text class='fc-feaa32'>12金豆</text>
+</view>
+<view class=' h80 lh80 bg-fff '>
+  <input class='w200 mgLeft30 h80 lh80 fs30 'maxlength='10' placeholder='请输入兑换数量'></input>
+</view>
+<view class='w690 h80 lh80 mgLeft30 mgTop30 fs30 '>手续费：0.00</view>
+<view class='w690 h60 lh60 mgLeft30 fs30 '>实际所得金额：0.00</view>
+
+<view >
+  <button class="w690 h80 bg-feb13b fs30 fc-fff mgLeft30 mgTop100 xy-center bRadius15" form-type="submit">立即兑换</button>
+</view>
+
+<view class="fs36 fc-feaa32 mgTop30 mgLeft30">*兑换说明</view>
+<view class="fs30 fc-999 mgTop10 mgLeft30">金豆兑换为金额：根据系统设置而定</view>

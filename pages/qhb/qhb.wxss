@@ -1,0 +1,67 @@
+/* pages/qhb/qhb.wxss */
+.model{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: rgba(0,0, 0, 0.5);
+  text-align: center;
+}
+.wchb{
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  left:50%;
+  top:40%;
+  margin-left: -35%;
+  margin-top: -50%; 
+  background-color: #972A25;
+}
+.item{
+  width: 99%;
+  background-color: white;
+  margin:2px 1%;
+  padding:10px 1px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.top{
+  height: 75%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: #BA3621;
+}
+.bottom{
+  height: 25%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: #972A25;
+  position: relative;
+}
+.hbw{
+  position: absolute;
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #F6A51F;
+  display: inline-block;
+  text-align: center;
+  top:-50%;
+  left: 50%;
+  margin-left: -50px;
+}
+.anniu{
+  color:white;
+  font-weight: bolder;
+  display: inline-block;
+  margin-top: 41px;
+  font-size: 18px;
+}
+
+.hbwimg{
+  width:60px;
+  height: 60px;
+  margin-top: -20px
+}

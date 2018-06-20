@@ -1,0 +1,137 @@
+<!-- 消费记录页面 -->
+<view class="{{cType=='xiaofei'?'db':'dn'}}">
+  <view class="bg-eee">
+    <view class="fs30 h40 lh40 fc-e4b737 mgLeft30 ">截止目前为止</view>
+    <view class="fs30 h40 lh40 fc-e4b737 mgLeft30">
+      <text decode='true' space='true'>支出&nbsp;¥100.00&nbsp;&nbsp;&nbsp;</text>
+      <text decode='true' space='true'>收入&nbsp;¥60.00</text>
+    </view>
+  </view>
+  <!-- 消费记录数据 -->
+  <block wx:for="{{xiaofeiData}}" wx:for-item="v" wx:key="index">
+    <view class="w690 mgLeft30 mgTop20">
+      <view class="fs30">
+        <text class="fl fontB">{{v.consumeType}}</text>
+        <text class="fr">{{v.money}}</text>
+      </view>
+      <view class="clearB"></view>
+      <view class="fs30 mgTop10">
+        <text class="fl">{{v.consumeTime}}</text>
+        <text class="fr fc-a21c25">{{v.unit}}</text>
+      </view>
+    </view>
+    <view class="clearB"></view>
+    <view class="btmLine-ccc mgTop20"></view>
+  </block>
+</view>
+
+<!-- 打卡记录页面 -->
+<view class="{{cType=='daka'?'db':'dn'}}">
+  <!-- 打卡记录数据 -->
+  <block wx:for="{{dakaData}}" wx:for-item="v" wx:key="index">
+    <view class="w690 mgLeft30 mgTop20">
+      <view class="fs30">
+        <text class="fl">{{v.dakaTime}}</text>
+        <text class="fr fontB {{v.dakaStatus == 0?'fc-da1f1d':''}}">{{v.dakaStatus == 1 ? "打卡失败" : "打卡成功"}}</text>
+      </view>
+    </view>
+    <view class="clearB"></view>
+    <view class="btmLine-ccc mgTop20"></view>
+  </block>
+</view>
+
+<!-- 充值记录页面 -->
+<view class="{{cType=='chongzhi'?'db':'dn'}}">
+  <!-- 充值记录数据 -->
+  <block wx:for="{{chongzhiData}}" wx:for-item="v" wx:key="index">
+    <view class="w690 mgLeft30 mgTop20">
+      <view class="fs30">
+        <text class="fl fontB">充值</text>
+        <text class="fr">{{v.money}}</text>
+      </view>
+      <view class="clearB"></view>
+      <view class="fs30 mgTop10">
+        <text class="fl">{{v.rechargeTime}}</text>
+        <text class="fr {{v.rechargeStatus==1?'fc-0f0':'fc-da1f1d'}}">{{v.rechargeStatus==1 ? "交易成功" : "交易失败" }}</text>
+      </view>
+    </view>
+    <view class="clearB"></view>
+    <view class="btmLine-ccc mgTop20"></view>
+  </block>
+</view>
+
+<!-- 兑换记录页面 -->
+<view class="{{cType=='duihuan'?'db':'dn'}}">
+  <!-- 兑换记录数据 -->
+  <block wx:for="{{duihuanData}}" wx:for-item="v" wx:key="index">
+    <view class="w690 mgLeft30 mgTop20">
+      <view class="fs30">
+        <text class="fl" decode="true" space='true'>{{v.exchangeType==2?v.gold+"金豆":v.jine+"元"}}&nbsp;&nbsp;</text>
+        <image class="w40 h40 fl " src="{{duihuanImg}}"></image>
+        <text class="fl" decode="true" space='true'>&nbsp;&nbsp; {{v.exchangeType==1?v.money+"金豆":v.money+"元"}}</text>
+        <text class="fr {{v.exchangeStatus==1?'fc-0f0':'fc-da1f1d'}}">{{v.exchangeStatus==1?"兑换成功":"兑换失败"}}</text>
+      </view>
+      <view class="clearB"></view>
+      <view class="fs30">
+        <text class="fl">{{v.exchangeTime}}</text>
+        <text class="fr "></text>
+      </view>
+    </view>
+    <view class="clearB"></view>
+    <view class="btmLine-ccc mgTop20"></view>
+  </block>
+</view>
+
+<!-- 提现记录页面 -->
+<!-- {{cType=='tixian'?'db':'dn'}} -->
+<view class="{{ishow}}">
+  <!-- 提现记录数据 -->
+  <block wx:for="{{tixianData}}" wx:for-item="v" wx:key="index">
+    <view class="w690 mgLeft30 mgTop20">
+      <view class="fs30">
+        <text class="fl">{{v.pro}}</text>
+        <text class="fr">{{v.money}}</text>
+      </view>
+      <view class="clearB"></view>
+      <view class="fs30 mgTop10">
+        <text class="fl">{{v.time}}</text>
+        <text class="fr {{v.status==1?'fc-0f0':'fc-da1f1d'}}">{{v.info}}</text>
+      </view>
+    </view>
+    <view class="clearB"></view>
+    <view class="btmLine-ccc mgTop20"></view>
+  </block>
+</view>
+<!-- 分享中心 -->
+<view class="{{cType=='fenx'?'db':'dn'}}">
+  <view class='tc xy-center'>
+    <view class='wth50  mgTop30 h80 bRadius40 border-feaa32 ov'>
+      <view class='wth50 lh80 fs30 fl fc-feaa32'>一级合伙人</view>
+      <view class='wth50 lh80 fs30 fl fc-fff bg-feaa32'>二级合伙人</view>
+    </view>
+  </view>
+  <view class='mgTop30'>
+    <block wx:for="{{fxData}}" wx:for-item="v" wx:key="index">
+      <view class='h60 lh60 border-botm mgRight30 mgLeft30'>
+        <text class="fl fs30 mgRight30">{{v.phone}}</text>
+        <text class='fr fs30 mgRight30'>{{v.time}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<!--分销达人  -->
+<view class="{{cType=='fenxiao'?'db':'dn'}}">
+  <view class='tc xy-center'>
+    <view class='w310 h300'>
+
+      <image class='wth100' src='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx09230d380d307bdb&redirect_uri=http%3A%2F%2Fwww.paiduikeji.com%2Fxzdpapi%2Fdist%2Fwxucode.json&response_type=code&scope=snsapi_userinfo&state={{userId}}#wechat_redirect'></image>
+    </view>
+  </view>
+</view>
+<!--空数据时  -->
+<!--  -->
+<view class='{{ishow}} fs30'>
+  <view class='mgTop200 xy-center'>
+    <view>暂时无数据........</view>
+  </view>
+</view>

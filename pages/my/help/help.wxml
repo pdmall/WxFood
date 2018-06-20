@@ -1,0 +1,8 @@
+<block wx:for="{{pData}}" wx:for-item="v" wx:key="index">
+  <view class="w690 mgLeft30 h60 lh60" data-url="{{v.url}}" bindtap='otherPage'>
+    <text class="fs30">{{v.tname}}</text>
+    <image class="w30 h30 fr mgTop20" src="{{rightImg}}"></image>
+  </view>
+  <view class="mgTop10 btmLine-ccc"></view>
+</block>
+

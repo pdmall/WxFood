@@ -1,0 +1,36 @@
+<!-- 账号、头像、余额 -->
+<view class=" bg-000">
+  <view class="h60 tl" >
+    <!-- 编辑用户信息 -->
+    <!-- <view class="w85 h60 fl mgLeft30" bindtap='editUser'>
+      <image class='w50 h50  mgLeft20' src="{{editImg}}"></image>
+    </view> -->
+  </view>
+  <view class="tc psnR" >
+    <image class='w120 h120 bRadius50 bg-fff' src='{{userData.headPortrait}}'></image>
+    <image class="psnA w85 h80 {{userData.member ==1 ? 'db': 'dn'}}" style='top:-40rpx;left:400rpx;transform: rotate(10deg);' src="{{vipImg}}"></image>
+  </view>
+  <view class="fs30 fc-e4b737 tc mgTop10" style='z-index:22'>{{userData.name}}</view>
+  <view class="fs30 fc-e4b737 tc mgTop10">{{userData.phone}}</view>
+  <view class="h120 ">
+    <view class="fl w300 mgTop30 mgLeft30" bindtap='yue'>
+      <view class="fc-fff fs30 tc">钱包余额（元）</view>
+      <view class="fc-e4b737 fs30 tc">{{userData.money}}</view>
+    </view>
+    <view class="bg-fff fl h80 mgTop20 mgLeft50" style='width:3rpx;'></view>
+    <view class="fl w300 mgTop30 mgLeft30" bindtap='dou'>
+      <view class="fc-fff fs30 tc">金豆数量（金豆）</view>
+      <view class="fc-e4b737 fs30 tc">{{userData.userIntegral}}</view>
+    </view>
+  </view>
+</view>
+<!-- 其他数据 -->
+<view wx:for="{{myData}}" wx:for-item="v" wx:key="index"> 
+  <view class="btmLine-ccc mgTop20 {{index>0?'db':'dn'}}"></view>
+  <view class="w690 mgLeft30 mgTop20" data-url="{{v.url}}" data-type="{{v.recordType}}" bindtap='toPage'>
+    <image class="w50 h50 fl" src="{{v.img}}"></image>
+    <text class="fs30" decode='true' space="true">&nbsp;&nbsp;&nbsp;{{v.text}}</text>
+    <image class="w30 h36 fr mgTop5"  src="{{rightImg}}"></image>
+  </view>
+</view>
+<view class="h30"></view>

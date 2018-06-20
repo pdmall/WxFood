@@ -1,0 +1,17 @@
+<!--pages/my/help/fud/fud.wxml-->
+<!--共享福袋玩法规则  -->
+<view class='db'>
+  <view class='wth100 mgRight30'>
+    <view class='mgLeft30'>
+      <text class='fs26'>1、进入共享福袋页面</text>
+      <view class='mgLeft40 mgTop10'>
+        <image class='wth95' mode="widthFix" src='/images/shop/fd1.png'></image>
+      </view>
+      <text class='fs26'>2、点击红包按钮，领取红包，红包打开后，进入店铺详情</text>
+      <text class='fs26'>3、商家发一个红包置顶一次，永远置顶最新商家</text>
+    </view>
+
+  </view>
+</view>
+
+<!--兑换规则  -->

@@ -1,0 +1,33 @@
+<!--pages/qhb/qhb.wxml-->
+<view hidden='{{toggle}}' class='model'>
+  <view class='wchb'>
+    <view style='padding-top:30px' class='top'>
+      <view style='text-align:center'>
+        <image style='width:80px;height:80px;border-radius:50%' src='{{advertiseImg}}'></image>
+      </view>
+      <view style='font-size:16px;margin-top:30px;text-align:center;color:white'>来自{{hbobj.shopName}}的福袋</view>
+
+      <view style='font-size:16px;margin-top:30px;text-align:center;color:white'>{{hbobj.message}}</view>
+    </view>
+
+
+    <view class='bottom'>
+      <view animation="{{animationData}}" catch:tap='dh' class='hbw'>
+        <view class='anniu'>
+          <span wx:if="{{hbw==false}}">看广告</span>
+          <image wx:if="{{hbw==true}}" class='hbwimg' src='../../images/image/hbw.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view style='padding:10% 10%;box-sizing:border-box' hidden='{{toggle2}}' class='model'>
+  <!-- <view class='wchb'> -->
+  <image wx:if="{{advertiseImg!=''}}" style="width: {{imagewidth*0.8}}px; height: {{imageheight*0.8}}px;" bindload="imageLoad" src='{{imgUrl}}{{advertiseImg}}'></image>
+  <view style='width:100%;background-color:white;font-size:16px'>
+    <view>再等
+      <span wx:if="{{sec!=''}}" style="color:red">{{sec}}</span>s就可以收福利啦</view>
+  </view>
+
+</view>

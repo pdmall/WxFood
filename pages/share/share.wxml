@@ -1,0 +1,12 @@
+<!--pages/share/share.wxml-->
+<view class='share'>
+  <view class='top'><image src='{{tImg}}'></image></view>
+  <view style='padding-top:60px;' class='bottom'>
+    <view style='text-align:center;font-size:16px'>恭喜你，获得{{shopName}}的福袋!</view>
+    <view wx:if="{{record!=''}}" style='font-size:25px;font-weight:bolder;text-align:center;margin-top:20px'>{{record}}金豆</view>
+    <view style='color:gray;text-align:center;margin-top:20px'>注意：{{content}}</view>
+    <button open-type='share' style='margin-top:100px'>分享</button>
+    <button bindtap='toshop'>去商家店铺</button>
+     <button bindtap='home'>继续收福利</button>
+  </view>  
+</view>

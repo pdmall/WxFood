@@ -1,0 +1,4 @@
+<view class="mgTop400 fs30 w750 tc {{isVip == true ? 'db' : 'dn'}}">你已经是超级会员了，可以在
+  <text class="fc-d1820c" bindtap='hyqj'>会员抢卷</text> 中抢卷了！</view>
+<view class="mgTop400  fs30 w750 tc fc-ccc {{isVip == false ? 'db' : 'dn'}}">你还不是超级会员
+  <text class="fc-d1820c" decode='true' space='true' bindtap='superMember'>&nbsp;成为超级会员</text> </view>

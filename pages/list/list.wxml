@@ -1,0 +1,35 @@
+<view class="">
+  <!-- 选择点赞类型 -->
+  <block wx:for="{{dzData}}" wx:for-item="v" wx:key="index">
+    <view class="h40 lh40 fl fc-777 fs30 mgLeft30 border-ccc mgTop30">
+    <text decode="true" space="{{true}}">&nbsp;&nbsp;{{v.dzlx}}({{v.dzNum}})&nbsp;</text>
+  </view>
+  </block>
+</view>
+<view class="clearB"></view>
+<!-- 用户评论数据 -->
+<view class="w720 mgLeft30 mgTop30 btmLine-ccc"></view>
+<view class=" w690 mgLeft30 mgTop30">  
+  <image class="fl w85 h85 bRadius50 bg-eee " src="{{v.img}}"></image>
+  <view class="w570 fl mgLeft30 ">
+    <view class="lh50 fs30 fc-666">用户名称
+      <text class="fr">2018-08-22</text>
+    </view>
+    <view class="mgTop5 fs30">
+      <view class="fs30 h40 lh40 fl">评分</view>
+      <image class="w175 h40 bg-000 mgLeft10"  ></image>
+    </view>
+    <view class="lh50 mgTop5 fs30">评价内容对方是飞洒锅广东分公司梵费公司鬼地方个梵蒂冈是电饭锅水电费</view>
+    <!-- 掌柜回复 -->
+    <view class="bg-f8 mgTop15">
+      <view class="h20"></view>
+      <view class="w530 mgLeft20  lh50 fs30 " >
+        <text class="fc-d1820c">掌柜回复：</text>
+        <text>水电费水电费水电费饭发个电饭锅电饭锅地方锅锅</text>
+      </view>
+      <view class="h20"></view>
+    </view>
+  </view>
+  <view class="clearB"></view>
+</view>                   
+<view class="clearB"></view>

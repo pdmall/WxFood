@@ -1,0 +1,119 @@
+<!-- 顶部搜索部分 -->
+<view class='{{bnshow}}'>
+  <view class="bg-000">
+    <view class="mgLeft30 w690 h120 lh120 psnR">
+      <image class="w50 h50 fl bRadius50 mgTop30" src="{{placeImg}}"></image>
+      <text class="fl fs30 fc-fff mgLeft15" bindtap='addres'>{{address}}</text>
+      <!-- 搜索输入框 -->
+      <image class="fr h60 w60 bRadius50 mgTop30" src='{{myImg}}' bindtap='my'></image>
+      <form bindsubmit='search' class='w400 fs30 bg-fff fr mgRight30 mgTop30 bRadius20'>
+        <view class='w400 fs30 bg-fff fr bRadius20'>
+
+
+          <input class="fl w300 h60 fs30 mgLeft10 bg-fff bRadius20" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
+
+          <!-- 放大镜图片 -->
+          <!-- {{sfxs==true?'db':'dn'}}  -->
+          <button class='w36 btn fr lh36 h36 psnA  right60 mgTop15' form-type='submit'>
+            <image class="w36 lh36 h36 psnA" src="{{searchImg}}" style='z-index:9999'></image>
+
+          </button>
+
+        </view>
+      </form>
+
+
+    </view>
+  </view>
+  <!-- 小程序列表 -->
+  <view class="h200 w750 bg-fff">
+    <view wx:for="{{proData}}" wx:for-item="v" wx:key="index">
+      <view class="w120 h120 fl mgTop30 tc {{index>0?'mgLeft20':'mgLeft30'}}">
+        <image class="w85 h85 bRadius50" src="{{v.img}}" data-index="{{index}}" data-path="{{v.path}}" data-appid="{{v.appid}}" bindtap='linkOther'></image>
+        <view class='fs26 tc mgTop10'>{{v.text}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="h20 bg-eee"></view>
+
+  <view class='{{ishow}}'>
+
+    <view class='tc'>
+      <text class="h80 lh80 tc fs30 fc-666" decode="true" space="{{true}}">-&nbsp;热门推荐&nbsp;-</text>
+    </view>
+    <!-- 分割线 -->
+    <view class="w690 mgLeft30 btmLine-ccc"></view>
+    <block wx:for="{{shopData}}" wx:for-item="v" wx:key="index">
+      <view class="h5 bg-eee {{index==0?'dn':'db'}}"></view>
+      <!-- 店家列表 -->
+      <view class="w690 h310 mgTop30 mgLeft30">
+        <view class="h145 " data-url="{{v.url}}" data-id="{{v.id}}" bindtap='shopInfo'>
+          <!-- 店家图片 -->
+          <view class="h145 w175 fl">
+            <image class="w145 h145 bg-000" src="{{v.sPhoto}}"></image>
+          </view>
+          <!-- 店家信息 -->
+          <view class="fl">
+            <view class="h40 fontB fs30">{{v.sName}}</view>
+            <view class="mgTop10">
+              <!-- 循环遍历显示5颗星 -->
+              <view class="fl w220 h40">
+                <block wx:for="{{starNum}}" wx:key="index">
+                  <image class="w40 h40 {{index>0?'mgLeft5':''}}" src="{{v.sLevel>item*2? v.sLevel>item*2+1? serverFull : serverHalf : serverNo}}"></image>
+                </block>
+              </view>
+              <text class=" fs26 mgLeft30">¥{{v.sAverage}}/人</text>
+            </view>
+            <view class="fc-666 fs26">
+              {{v.place}}
+              <text decode="true" space="{{true}}">&nbsp;&nbsp;{{v.type}}</text>
+              <text class="fr">{{v.sDistance}}m</text>
+            </view>
+            <view class="w515 btmLine-ccc mgTop10"></view>
+          </view>
+        </view>
+
+        <view class="w690 mgTop30">
+          <view class="h145 w175 fl"></view>
+          <view class="fl w515">
+            <!-- 卷、团 -->
+            <view class="h60 mgTop10">
+              <view class="w40 h40 lh40 fs30 fl fc-fff bg-feaa32 tc mgTop10">卷</view>
+              <text class="fc-666 fs26" decode="true" space="{{true}}">&nbsp;&nbsp;{{v.daiJinQuan}}</text>
+            </view>
+            <view class="h60 ">
+              <view class="w40 h40 lh40 fs30 fl fc-fff bg-ff6633 tc mgTop10">团</view>
+              <text class="fc-666 fs26" decode="true" space="{{true}}">&nbsp;&nbsp;{{v.tuanGouQuan}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='{{noshow}} mgTop200 xy-center'>
+    <text class='fs30 tc'>附近没有合适的店铺，
+  </text>
+    <text class='fs30 tc'>店家正在努力赶往平台……</text>
+  </view>
+  <view class=''></view>
+  <view class="h20"></view>
+</view>
+<!--授权  -->
+<view class='{{shouquan}} mgTop200' hidden='{{flag}}'>
+  <view class='tc '>
+    <image class='w100 h100' src='/images/public/paidui.jpg'></image>
+  </view>
+
+
+  <view class='tc fs30'>
+
+    <view class='tc mgTop30'>
+      <text>派对mall欢迎你</text>
+    </view>
+    <view class=' tc mgTop30'>
+      <text class='tc'>请微信授权登录后放心使用派对mall</text>
+    </view>
+    <button class='mgTop30 btns' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+      <image class='w30 h30' src='/images/my/WeChat.png'></image>微信授权登录</button>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/my/yue/dou.wxml-->
+
+<view class=''>
+  <view class='xy-center mgTop200'>
+    <view>
+      <view class='w250 h300 bg-feaa32 bRadius50 '>
+      <view class='xy-center w100 h100 tc mgLeft40'>
+      
+        <image class='w100 h100' src='/images/shop/dou.png'></image></view>
+        <view class='wth100 hth100 xy-center'>
+          <text class='fs30'>金豆（金豆）</text>
+        </view>
+        <view class='xy-center'>
+          <text class='tc fc-ff6a49 fs48'>{{datas.userIntegral}}</text>
+        </view>
+      </view>
+       
+    </view>
+   
+  </view>
+  <view class='xy-center'>
+  <view class='h80  w570 tc fc-fff bg-feaa32 mgTop200 lh80 border-rudie' bindtap="jddh">兑换余额</view>
+  </view>
+   
+</view>

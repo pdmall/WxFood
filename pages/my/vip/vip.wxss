@@ -1,0 +1,9 @@
+/* pages/my/vip/vip.wxss */
+.xyCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mgTop400{
+  margin-top: 400rpx;
+}

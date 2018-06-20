@@ -1,0 +1,6 @@
+/* pages/voucher/rules/rules.wxss */
+.spot{
+  width:20rpx;
+  height:20rpx;
+  margin:0 15rpx 0 15rpx;
+}

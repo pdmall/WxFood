@@ -1,0 +1,16 @@
+/* pages/fujin/fujin.wxss */
+.fujin view{
+  width: 33.2%;
+}
+
+swiper swiper-item view{
+	height: 60rpx;
+	line-height: 60rpx;
+	width: 690rpx;
+	margin-left: 30rpx;
+	font-size: 26rpx;
+	border-bottom: 1rpx solid #ccc;
+}
+ swiper{
+	height: 335rpx;
+} 

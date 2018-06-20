@@ -1,0 +1,4 @@
+/* pages/shop/detail/detail.wxss */
+.wth70{
+  padding-bottom: 10rpx;
+}

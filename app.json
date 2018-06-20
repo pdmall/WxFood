@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/detail/detail",
+    "pages/my/yue/tx/tx",
+    "pages/my/yue/yue",
+    "pages/my/yue/cz/cz",
+    "pages/order/order",
+    "pages/fujin/fujin",
+    "pages/my/fenx/fenx",
+    "pages/my/suggest/suggest",
+    "pages/my/vip/vip",
+    "pages/my/help/helpruter/fud",
+    "pages/my/help/help",
+    "pages/my/record/record",
+    "pages/my/help/helpruter/qiangq",
+    "pages/my/order/order",
+    "pages/my/duihuan/duihuan",
+    "pages/my/my",
+    "pages/my/yue/dou",
+    "pages/list/list",
+    "pages/order/tuik/tuik",
+    "pages/ddDetail/ddDeail",
+    "pages/djjDetail/djjDeail",
+    "pages/tgDetail/tgDeail",
+    "pages/shop/pingjia/pingjia",
+    "pages/voucher/rules/rules",
+    "pages/voucher/dyj/dyj",
+    "pages/voucher/loot/loot",
+    "pages/redp/redp",
+    "pages/logs/logs",
+    "pages/my/yue/yedh/yedh",
+    "pages/my/yue/jinddh/jinddh",
+    "pages/qhb/qhb",
+    "pages/share/share"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#f5b225",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/index.png",
+        "selectedIconPath": "/images/tabbar/index1.png"
+      },
+      {
+        "pagePath": "pages/voucher/loot/loot",
+        "text": "抢卷",
+        "iconPath": "/images/tabbar/quan.png",
+        "selectedIconPath": "/images/tabbar/quan1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabbar/mine.png",
+        "selectedIconPath": "/images/tabbar/mine1.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+<view class="bg-fff">
+ <view class="h30"></view>
+  <view class="w690 h145 mgLeft30">
+    <view class="h145 " >
+      <!-- 商品图片 -->
+      <view class="h145 w175 fl">
+        <image class="w145 h145 bg-000" src=""></image>
+      </view>
+      <!-- 商品信息 -->
+      <view class="fl w515">
+        <view class=" fs30">
+          <text class='fontB'>火锅王3-4人餐</text>
+          <view class="fr fc-ccc">¥123</view>
+        </view>
+        <view class="fc-666 fs30 mgTop10">
+          <text decode="true" space="{{true}}">周一至周日</text>
+        </view>
+        <view class="fc-0f0 fs30 mgTop10">
+          <image class="w30 h30 bg-000"></image>
+          <text decode="true" space="{{true}}">&nbsp;过期自动退</text>
+        </view>
+      </view>
+      <view class="clearB"></view>
+    </view>
+  </view>
+  <view class="w720 mgLeft30 btmLine-ccc mgTop30"></view>
+  <!-- 加减数量 -->
+  <view class="mgTop20 w690 mgLeft30">
+    <text class="fs36 lh80">数量</text>
+    <view class=" fr w80 h80 bg-feaa32 bRadius50 psnR" data-type="add" bindtap='updateNum'>
+      <text class='fs60 fc-fff dlb psnA left20' >+</text>
+    </view>
+    <text class=" fr fs45 lh80" decode='true' space='true'>&nbsp;&nbsp;{{num}}&nbsp;&nbsp;</text>
+    <view class=" fr w80 h80 bRadius50 psnR border-ccc" data-type="jian" bindtap='updateNum'>
+      <view class='w40 h5 left20 top40 bg-ccc dlb psnA'></view>
+    </view>
+  </view>
+  <view class="clearB"></view>
+  <view class="w720 mgLeft30 btmLine-ccc mgTop20 fs36"></view>
+  <!-- 小计金额 -->
+  <view class="w690 mgLeft30 h80 lh80">
+    <text>小计</text>
+    <text class="fr fc-d1820c">¥123</text>
+  </view>
+  <view class="h20 bg-eee"></view>
+  <!-- 抵用券 -->
+  <view class="w690 mgLeft30 h80 lh80">
+    <text>抵用券</text>
+    <image class="w36 h36 fr mgTop30" src="{{rightImg}}" ></image>
+    <text class="fr right20 mgRight20">暂无可用</text>
+  </view>
+  <view class="w720 mgLeft30 btmLine-ccc mgTop10 fs36"></view>
+  <!-- 金豆 -->
+  <view class="w690 mgLeft30 h80 lh80">
+    <text>金豆</text>
+    <image class="w36 h36 fr mgTop30" src="{{rightImg}}" ></image>
+    <input type='number' maxlength='10' class="fr mgRight20 mgTop20 tr" placeholder-class='tr' placeholder='请输入支付金豆'></input>
+  </view>
+  <view class="w720 mgLeft30 btmLine-ccc mgTop10 fs36"></view>
+  <!-- 金豆 -->
+  <view class="w690 mgLeft30 h80 lh80">
+    <text>余额</text>
+    <image class="w36 h36 fr mgTop30" src="{{rightImg}}" ></image>
+    <input type='number' maxlength='10' class="fr mgRight20 mgTop20 tr" placeholder-class='tr' placeholder='请输入支付余额'></input>
+  </view>
+  <view class="w720 mgLeft30 btmLine-ccc mgTop10 fs36"></view>
+  <!-- 实付金额 -->
+  <view class="w690 mgLeft30 h80 lh80">
+    <text>实付金额</text>
+    <text class="fr fc-d1820c">¥123</text>
+  </view>
+  <view class="h30 bg-eee"></view>
+  <!-- 手机号 -->
+  <view class="w690 mgLeft30 h80 lh80">
+    <text>手机号</text>
+    <text class="fr">18202817160</text>
+  </view>
+</view>
+
+<view class="w690 mgLeft30 h100 lh100 bg-feaa32 tc bRadius15 fc-fff mgTop50">¥158提交订单</view>
+

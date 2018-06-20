@@ -1,0 +1,10 @@
+<!--pages/my/yue/cz/cz.wxml-->
+<view class=''>
+  <view class=''>
+  <form bindsubmit='searchBox'>
+  <view class='h100 lh100 bg-fff '><text>金额（￥）</text><input class='mgLeft30 wth70 h100 lh100 fr' type='number' placeholder-style='color：#f1f1f1' value='{{form_info}}' onkeyup="clearNoNum(this)" name="jine" placeholder='请填写充值金额'></input>
+  </view>
+   <button class='wth70 h100 lh100 bg-feaa32 fc-fff' form-type='submit'>立即充值</button>
+  </form>
+  </view>
+</view>

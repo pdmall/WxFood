@@ -1,0 +1,24 @@
+<!-- 使用规则 -->
+<view class="w690 mgLeft30 fs30 mgTop20">
+  <view class="mgTop10 fontB">使用须知：</view>
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>{{obj}}</text>
+  </view>
+<!-- 使用规则
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>所有店铺均可使用</text>
+  </view>
+  <view class='w690  mgTop30 btmLine-ccc '></view>
+ 
+  <view class="mgTop30 fontB">注意事项：</view>
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>使用时间10：00-24：00</text>
+  </view>
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>使大是大非是的地方规范的方法</text>
+  </view> -->
+</view>

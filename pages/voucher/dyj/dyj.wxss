@@ -1,0 +1,4 @@
+/* pages/voucher/dyj/dyj.wxss */
+page{
+  background: #eeeeee;
+}

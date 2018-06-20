@@ -1,0 +1,10 @@
+<!-- 意见建议内容 -->
+<form bindsubmit='tjjy'>
+  <view class="w690 h600  mgLeft30 mgTop30 bg-fff psnR">
+    <view class="h20"></view>
+    <textarea name="content" class=" w650 h600 fs30 mgLeft20 lh40" maxlength='300' placeholder='请填写您的宝贵建议...' bindinput='getCont'></textarea>
+    <view class="fr fs30 psnA right20 bottom15 fc-999">{{num}}/300</view>
+  </view>
+  <button class="w630 h80 bg-feb13b fs30 fc-fff mgLeft60 mgTop100 xy-center bRadius15" form-type="submit">提交</button>
+</form>
+ 

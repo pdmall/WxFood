@@ -1,0 +1,26 @@
+<!--pages/my/yue/yue.wxml-->
+<view class=''>
+  <view class='xy-center mgTop200'>
+    <view class='tc'>
+        <image class='w150 h150' src='/images/my/fd.png'></image>
+     
+      <view class='tc fs30'>
+        余额（元）
+      </view>
+      <view class='tc mgTop5'>
+        <text class='fc-ff6a49 fs60'>{{datas.money}}</text>
+      </view>
+    </view>
+    
+  </view>
+  <view class='xy-center tc fc-fff mgTop50'>
+  <view>
+  
+  <view class='h80 w570 bg-ff6a49 mgTop30 lh80 border-rudie' bindtap='tx'>提现</view>
+    <view class='h80 w570 bg-feaa32 mgTop30 lh80 border-rudie' bindtap='cz'>充值</view>
+    <view class='h80 w570 bg-f57d25 mgTop30 lh80 border-rudie ' bindtap='yedh'>兑换</view>
+    
+  </view>
+
+  </view>
+</view>

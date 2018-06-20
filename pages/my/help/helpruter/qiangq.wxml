@@ -1,0 +1,15 @@
+<!--pages/my/help/helpruter/qiangq.wxml-->
+<!-- 天天抢券玩法 -->
+<view class='db'>
+<block wx:for="{{rutersData}}" wx:for-item="v" wx:key="index">
+<view class='wth100 mgTop30 border-botm pd-bom'>
+<view class='mgLeft30 '>
+<view class='border-f1f1 fs30 pd-bom10'>
+{{v.title}}
+</view>
+<view class='fs26 mgTop5'>{{v.text}}</view>
+</view>
+
+</view>
+</block>
+</view>

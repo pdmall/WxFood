@@ -1,0 +1,20 @@
+<!-- 劵详细信息  -->
+<view class="w690 mgLeft30  bg-fff mgTop40 psnR h230" >
+  <image class="bRadius50 psnA bg-eee w30 h30 top70 left-15 " ></image>
+  <image class="bRadius50 psnA bg-eee w30 h30 top70 right-15 "></image>
+  <view class="h30"></view>
+  <view class=" mgLeft30 fc-999 psnR w660 h200" >
+    <view class=" fl w420 h200 ">
+      <view class='fs36 lh60 fc-da1f1d'>新人现金劵
+        <text class="fs30" >（全店通用）</text>
+      </view>
+      <view class='fs30 lh60'>有效期：永久 </view>
+      <view class='fs30 lh60 mgTop10'>商家现金券和新人劵不能叠加使用 </view>
+    </view>
+    <text class="fs40 psnA right30 top-30" >¥<text class="fs80" >5</text></text>
+    <image class='w120 h120  psnA right0 bottom0 bg-eee zIdx3'></image>
+  </view>
+   <view class="w630 top150 mgLeft30 psnA zIdx4 borderDashed" ></view> 
+</view>
+
+

@@ -1,0 +1,4 @@
+/* pages/ddDetail/ddDeail.wxss */
+page{
+  background: #eeeeee;
+}

@@ -1,0 +1,177 @@
+<view class="w690 mgTop30 mgLeft30">
+  <view class="h175 ">
+    <!-- 店家图片 -->
+    <view class="h175 w175 fl">
+      <image class="w175 h175 " src="{{ shopData.sPhoto}}"></image>
+    </view>
+    <!-- 店家信息 -->
+    <view class="fl mgLeft30">
+      <view class="fontB fs30">{{shopData.sName}}</view>
+      <view class="mgTop10">
+        <!-- 循环遍历显示5颗星 -->
+        <view class="fl w220 h40">
+          <block wx:for="{{starNum}}" wx:key="index">
+            <image class="w40 h40 {{index>0?'mgLeft5':''}}" src="{{shopData.sLevel>item*2? shopData.sLevel>item*2+1? serverFull : serverHalf : serverNo}}"></image>
+          </block> 
+        </view> 
+        <!-- <image class="w175 h40 bg-000 mgTop15"></image> -->
+        <text class="fs26 mgLeft15">{{shopData.commentNum}}条</text>
+        <text class="fs26 mgLeft15">¥{{shopData.sAverage}}/人</text>
+      </view>
+      <!-- 评价 -->
+      <view class="fc-666 fs26">
+        <text decode="true" space="{{true}}">口味：{{shopData.tastePoints}}</text>
+        <text decode="true" space="{{true}}">&nbsp;&nbsp;环境：{{shopData.environPoints}}</text>
+        <text decode="true" space="{{true}}">&nbsp;&nbsp;服务：{{shopData.servicePoints}}</text>
+      </view>
+      <view class="fc-666 fs26">
+        桐梓林<text decode="true" space="{{true}}">&nbsp;&nbsp;{{shopData.type}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class=" btmLine-ccc mgTop30" ></view>
+<!-- 营业时间 -->
+<view class="h80 lh80 mgLeft30">
+  <image class="w50 h50 mgTop20 fl" src="{{timeImg}}"></image>
+  <text class="fs30 mgLeft20 ">营业时间</text>
+  <text class="fs30" decode='true' space='true'>&nbsp;&nbsp;{{shopData.workingTime}}</text>
+</view>
+<view class=" btmLine-ccc mgTop15" ></view>
+<!-- 店铺位置 -->
+<view class=" lh80 w690 mgLeft30">
+  <image class="w50 h50 mgTop20 fl" src="{{placeImg}}"></image>
+  <text class="fs30 mgLeft20 ">{{shopData.sAddress}}</text>
+  <image class="w50 h50 mgTop20 fr " src="{{telImg}}" bindtap='callTel'></image>
+  <view class='mgRight30 h50 mgTop20 bg-eee fr' style='width:3rpx; '></view>
+</view>
+<view class=" btmLine-ccc mgTop15" ></view>
+<!-- 团购套餐 -->
+<view class='{{tg}}'>
+<view class="w690 mgLeft30 fontB fs30 mgTop30">团购套餐</view>
+<view wx:for="{{tuangou}}" wx:key="index" wx:for-item="v">
+  <view class="w690 mgLeft30 {{index>0 ? tuangouShowOther == false? 'dn': 'db' : 'db'}}">
+    <view class="h175 mgTop20">
+      <!-- 店家图片 -->
+      <view class="h175 w175 fl">
+        <image class="w175 h175 bg-000" src="{{ shopData.sPhoto}}"></image>
+      </view>
+      <!-- 店家信息 -->
+      <view class="fl mgLeft30 wth70 border-botm">
+        <view class="fontB fs30">{{v.vName}}</view>
+        <view class="fs26">
+          <text class="mgRight20">{{v.vText}}</text>
+        </view>
+        <!-- 评价 -->
+        <view class="fc-666 fs26 mgTop10">
+          <text decode="true" space="{{true}}">{{v.vEffective}}</text>
+        </view>
+        <view class="fc-666 fs26 mgTop10">
+        <text class="fc-d1820c" decode="true" space="{{true}}">¥{{v.vFinalmoney}} &nbsp;&nbsp;</text>
+        <text style='text-decoration:line-through'>¥{{v.vMoney}}</text>
+        <text class='fr fs30'>已售 {{v.saleNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="clearB"></view>
+<!-- 查看其它团购 -->
+<view class="xy-center" >
+  <view class="w300 h60 lh60  fs30 fc-d1820c mgTop30 tc {{tuangou.length>1?'db':'dn'}}" bindtap='showOtherTuangou'>
+    <text decode='true' space='true' class="{{tuangouShowOther==true?'dn':'db'}}">查看其它{{tuangou.length -1 }}个团购</text>
+    <!-- <image style='height:25rpx;width:20rpx;;transform:rotate(180deg);' src="{{upImg}}"></image> -->
+    <text decode='true' space='true' class="{{tuangouShowOther==false?'dn':'db'}}">收起</text>
+    
+  </view>
+</view>
+</view>
+<view class="w690 mgLeft30 fontB fs30 mgTop30">代金券</view>
+<view wx:for="{{daijinquan}}" wx:key="index" wx:for-item="v"> 
+<view> 
+  <view class="w690 mgLeft30 mgTop20 h200 bg-fef5e6 {{index>0 ? daijinShowOther == false? 'dn': 'db' : 'db'}}" >
+    <view class="h20"></view>
+    <view class="w400 fl">
+      <view  class="mgLeft30 fs36">{{v.vMoney}}元代金券</view>
+      <view class="mgLeft30 mgTop20 fs30 fc-ccc">
+        <text decode='true' space='true'>{{v.vTimelimit}}&nbsp;|&nbsp;{{v.vScope}}</text>
+      </view>
+    </view>
+    <view class="w200 fr">
+      <view class="fs30 fc-fff bg-feb13b mgTop20 w175 h60 lh60 tc bRadius10" data-id="{{v.id}}" bindtap='buyVoucher'>立即抢购</view>
+    </view>
+    <view class="clearB"></view>
+    <view class="mgLeft30 mgTop20">
+      <text class="fl fs36 fc-d1820c">¥{{v.vFinalmoney}}</text>
+      <text class="fr fs26 fc-ccc mgRight30">已售{{v.saleNum}}</text>
+    </view>
+  </view>
+</view>
+</view>
+<!-- 查看其它代金券 -->
+<view class="xy-center " >
+  <view class="w300 h60 lh60  fs30 fc-d1820c mgTop30 tc {{daijinquan.length>1?'db':'dn'}}" bindtap="showOtherDaijin">
+    <text decode='true' space='true' class="{{daijinShowOther==true?'dn':'db'}}">查看其它{{daijinquan.length -1 }}个代金券&nbsp;&nbsp;</text>
+    <!-- <image class="{{daijinShowOther==true?'dn':'db'}} " style='height:25rpx;width:20rpx;;transform:rotate(180deg);' src="{{upImg}}"></image> -->
+    <text decode='true' space='true' class="{{daijinShowOther==false?'dn':'db'}}">收起</text>
+    
+  </view>
+</view>
+
+<view class="clearB"></view>
+<!-- 网友评价 -->
+<view class="w690 mgLeft30 fontB fs30 mgTop30">网友评价（{{pjnum}}）
+  <view class="w100 fr fc-d1820c" bindtap='showOtherComment'>
+    <text decode='true' space='true'>{{commentShowOther==false?'更多':'收起'}}&nbsp;</text>
+    <image class=" " style='height:20rpx;width:25rpx;;transform:rotate(90deg);' src="{{upImg}}"></image>
+  </view>
+</view>
+<view class="">
+  <!-- 选择点赞类型 -->
+  <block wx:for="{{dzData}}" wx:for-item="v" wx:key="index">
+    <view class="h40 lh40 fl fc-777 fs30 mgLeft30 border-ccc mgTop30">
+    <text decode="true" space="{{true}}">&nbsp;&nbsp;{{v.dzlx}}({{v.dzNum}})&nbsp;</text>
+  </view>
+  </block>
+</view>
+<view class="clearB"></view>
+<!-- 用户评论数据 -->
+<view class='{{ishow}}'>
+<view class="w720 mgLeft30 mgTop30 btmLine-ccc"></view>
+<block wx:for="{{pjlist}}" wx:key="index" wx:for-item="v">
+  <view class=" w690 mgLeft30 mgTop30 {{index>2 ? commentShowOther == false? 'dn': 'db' : 'db'}}" >
+    <image class="fl w85 h85 bRadius50 bg-eee " src="{{v.userPhoto}}"></image>
+      <view class="w570 fl mgLeft30 ">
+        <view class="lh50 fs30 fc-666">{{v.userName}}
+          <text class="fr">{{v.updated}}</text>
+        </view>
+        <view class="mgTop5 fs30">
+          <view class="fs30 h40 lh40 fl">评分</view>
+          <view class="fl w270 h40">
+            <block wx:for="{{starNum}}" wx:key="index">
+              <image class="w40 h40 mgLeft5" src="{{v.allScore>item*2? v.allScore>item*2+1? serverFull : serverHalf : serverNo}}"></image>
+            </block> 
+          </view>
+          <view class="clearB"></view>
+        </view>
+        <view class="lh50 mgTop10 fs30">{{v.mTxx1}}</view>
+        <!-- 掌柜回复 -->
+        <view class="bg-f8 mgTop15 {{v.mTxx2 == ''?'dn':'dlb'}}">
+          <view class="h20"></view>
+          <view class=" mgLeft20  lh50 fs30 " >
+            <text class="fc-d1820c">掌柜回复：</text>
+            <text>{{v.mTxx2}}</text>
+          </view>
+          <view class="h20"></view>
+        </view>
+      </view>
+    <view class="clearB"></view>
+  </view> 
+</block>
+</view>
+ <view class='{{noshow}} mgTop200'>
+ <text class='fs30 tc'>附近没有合适的店铺，店家正在努力赶往平台……</text>
+ </view>
+<!-- 空白高度 -->
+<view class="h30"></view>                  
+

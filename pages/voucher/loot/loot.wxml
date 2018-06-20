@@ -1,0 +1,28 @@
+
+<!-- 劵详细信息 ff5710 -->
+<view class="w690 mgLeft30  bg-feaa32 mgTop40 psnR h230" wx:for="{{list}}">
+  <image class="bRadius50 psnA bg-fff w30 h30 right80 top-15" ></image>
+  <image class="bRadius50 psnA bg-fff w30 h30 right80 bottom-15" ></image>
+  <view class="h30"></view>
+  <view class=" mgLeft30 fc-fff psnR w630 h200" >
+    <text class="fs40 fl">¥<text class="fs80" >{{item.faceValue}}</text></text>
+    <view class=" fl mgLeft30 w420 h200 ">
+      <view class='fs36 lh60'>{{item.useLimit}}</view>
+      <view class='fs30 lh60'>剩余{{item.num}}张 </view>
+      <view style='font-size:10px;'>
+       <text decode='true' space='true'>时间：{{item.activityTime}}</text>
+      </view>
+      <view class='fs30 lh60 w175' data-type="3" data-id="{{item.id}}" bindtap='useRules'>
+        <text  decode='true' space='true' >使用规则&nbsp;</text>
+        <image class="w30 h30" src='{{rightImg}}' ></image>
+      </view>
+    </view>
+    <view class='fs50 psnA w100 h130 right0 top25' bindtap='receive' data-id='{{item.id}}'>立即领取</view>
+  </view>
+</view>
+
+
+
+
+
+

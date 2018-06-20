@@ -1,0 +1,6 @@
+/* pages/djjDetail/djjDeail.wxss */
+.spot{
+  width:15rpx;
+  height:15rpx;
+  margin:0 10rpx 0 10rpx;
+}

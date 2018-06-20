@@ -1,0 +1,83 @@
+<!-- 顶部搜索部分 -->
+<view class="bg-eee">
+  <view class="mgLeft30 w690 h120 lh120 psnR">
+    <!-- 搜索输入框 -->
+    <view class="fl w690 h80 fs30 bg-fff mgTop20 bRadius20">
+      <input class="w550 h80 fs30 mgLeft60" maxlength='30' placeholder='请输入关键字' bindinput='checkVal'></input>
+    </view>
+    <!-- 放大镜图片 -->
+    <image class="w36 h36 psnA top45 left15 {{sfxs==true?'db':'dn'}}" src="{{searchImg}}"></image>
+    <view class="h60 lh60 w60  psnA fc-feaa32 fs30 top30 right20" >搜索</view>
+  </view>
+</view> 
+<!--排序 -->
+<!--排序 -->
+ <view class=" " bindtap='showOtherTuangou'>
+    <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">附近<image class="w30 h30 trans90" src="{{rightImg}}"></image></view>
+    <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">美食<image class="w30 h30 trans90" src="{{rightImg}}"></image></view>
+    <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">智能排序<image class="w30 h30 trans90" src="{{rightImg}}"></image></view>
+</view>
+  
+<block wx:if="{{ifshow==true}}">
+
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+    <swiper-item><view>附近(智能范围内</view>
+    <view> >500米</view>
+    <view>1000米</view>
+    <view>2000米</view></swiper-item>
+    <swiper-item><view >美食(智能范围内）</view>
+    <view>小吃快餐</view>
+    <view>火锅</view>
+    <view>川菜</view></swiper-item>
+    <swiper-item><view>智能排序</view>
+    <view>离我最近</view>
+    <view>评价最好</view>
+    <view>价位最高</view></swiper-item>
+</swiper>
+</block>
+<view class="clearB">
+</view>
+<!-- 分割线 -->
+ <view class="w690 mgLeft30 btmLine-ccc"></view>
+ <block wx:for="{{paix}}" wx:for-item="v" wx:key="index">
+  <view class='h60 lh60   w690 mgLeft30 fs26 btmLine-ccc ' style='display:{{dispaly}}'>{{xq}}</view>
+ </block> 
+ 
+<block wx:for="{{shopData}}" wx:for-item="v" wx:key="index">
+  <view class="h5 bg-eee {{index==0?'dn':'db'}}"></view>
+  <!-- 店家列表 -->
+  <view class="w690 h310 mgTop30 mgLeft30">
+  
+    <!-- 店家图片 -->
+    <view class="h310 w175 fl"  data-url="{{v.url}}" data-id="{{v.id}}" bindtap='shopInfo'>
+      <image class="w145 h145 bg-000" src="{{v.sPhoto}}"></image>
+    </view>
+
+    <!-- 店家信息 -->
+    <view class="fl w515 h310 ">
+      <view class="fontB fs30" data-url="{{v.url}}" data-id="{{v.id}}" bindtap='shopInfo'>{{v.sName}}</view>
+      <view class="">
+        <block wx:for="{{starNum}}" wx:key="index">
+            <image class="w40 h40 {{index>0?'mgLeft5':''}}" src="{{v.sLevel>item*2? v.sLevel>item*2+1? serverFull : serverHalf : serverNo}}"></image>
+          </block>
+        <text class="fs26 mgLeft30">¥{{v.sAverage}}/人</text>
+      </view>
+      <view class="fc-666 fs26">
+        {{v.place}}<text decode="true" space="{{true}}">&nbsp;&nbsp;四川火锅</text>
+        <text class="fr">{{v.sDistance}}m</text>
+      </view>
+
+      <view class="w515 btmLine-ccc mgTop10"></view>
+      <!-- 卷、团 -->
+      <view class="h60 mgTop10">
+        <view class="w40 h40 lh40 fs30 fl fc-fff bg-feaa32 tc mgTop10">卷</view>
+        <text class="fc-666 fs26" decode="true" space="{{true}}">&nbsp;&nbsp;{{v.daiJinQuan}}</text>
+      </view>
+      <view class="h60 ">
+        <view class="w40 h40 lh40 fs30 fl fc-fff bg-ff6633 tc mgTop10">团</view>
+        <text class="fc-666 fs26" decode="true" space="{{true}}">&nbsp;&nbsp;{{v.tuanGouQuan}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="h20"></view>

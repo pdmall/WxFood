@@ -1,0 +1,8 @@
+/* pages/my/yue/cz/cz.wxss */
+page{
+  background: #f1f1f1;
+}
+button{
+  border: none;
+  margin-top: 600rpx;
+}

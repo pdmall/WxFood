@@ -1,0 +1,31 @@
+<block wx:for="{{redList}}" wx:for-item="v" >
+  <view class="h5 bg-eee"></view>
+  <!-- 店家列表 -->
+  <view class="  mgTop30 mgLeft30" style='height:170rpx;'>
+    <view class="h145 "  data-id="{{v.id}}" data-da='{{v.storeId}}' data-obj='{{v}}' bindtap='toQhb'>
+      <!-- 店家图片 -->
+      <view class="h145 w175 fl">
+        <image class="w145 h145 bg-000" src="{{imgurl}}{{v.tImg}}"></image>
+      </view>
+      <!-- 店家信息 -->
+      <view class="fl">
+        <view class="h40 fontB fs30">{{v.shopName}}</view>
+        <view class="mgTop10">
+          <!-- 循环遍历显示5颗星 -->
+          <view class="fl w220 h40" style='font-size:10px;'>
+            总金额：{{v.tMoney}}
+          </view>
+          <text class=" fs26 mgLeft30">余额:¥{{v.balacne}}</text>
+        </view>
+        <view class="fc-666 fs26" style='color:#9D9D9D;'>
+          数量:{{v.robNum}}个
+          <text decode="true" space="{{true}}">&nbsp;&nbsp;{{v.type}}</text>
+          <text class="fr">{{v.sDistance}}m</text>
+        </view>
+         <view style='font-size:12px;color:#9D9D9D;'>
+          发布时间：{{v.tCreate}}
+         </view>
+      </view>
+    </view>
+  </view>
+</block>

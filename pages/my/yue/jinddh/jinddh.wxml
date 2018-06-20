@@ -1,0 +1,24 @@
+<!--pages/my/yue/jinddh/jinddh.wxml-->
+<!--金豆兑换余额  -->
+<view class='{{}}'>
+  <form bindsubmit='searchBox'>
+
+    <view class='fs30'>
+      <view class='h80 lh80 mgLeft30'>您可兑换的金豆为
+        <text class='fc-feaa32 mgLeft10 mgRight20 '>{{userIntegral}}</text>金豆</view>
+      <view class='bg-fff h100'>
+        <input class='h100 lh100 mgLeft30' type='number' onkeyup="clearNoNum(this)" placeholder-style='color:#ccc' name="jindou" value='{{form_info}}'  placeholder='请输入提现金额'></input>
+      </view>
+      <view class='h60 lh60 mgLeft30 mgTop30'>手续费：{{sxf}}</view>
+      <view class='h60 lh60 mgLeft30'>实际到账金额：{{jindou}}</view>
+      <view class='mgTop150 '>
+        <button form-type='submit' class='wth85 bRadius15 fc-fff bg-feaa32 h80 lh80 tc'>立即兑换</button>
+      </view>
+       </view>
+  </form>
+  <view class='mgTop50 mgLeft30'>
+    <view class='fs30 fc-feaa32'>*金豆兑换说明</view>
+    <view class='fs30 mgTop15'>兑换手续费：根据系统而定</view>
+  </view>
+ 
+</view>

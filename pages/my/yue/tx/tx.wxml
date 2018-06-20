@@ -1,0 +1,23 @@
+<!--pages/my/yue/tx/tx.wxml-->
+<!--提现页面  -->
+<view class='{{}}'>
+  <view class=''>
+    <view class='h80 lh80 mgLeft30'>您可提现的金额为<text class='fc-feaa32 mgLeft20 '>{{datas.money}}</text>元</view>
+    <view class='bg-fff h100'>
+      <input class='h100 lh100 mgLeft30' type='number' onkeyup="clearNoNum(this)" placeholder-style='color:#ccc' placeholder='请输入提现金额'></input>
+    </view>
+    <view class='h60 lh60 mgLeft30 mgTop30'>手续费：</view>
+    <view class='h60 lh60 mgLeft30'>实际到账金额：</view>
+    <view class='mgTop100 '>
+      <view class='wth85 bRadius15 fc-fff bg-feaa32 h80 lh80 tc'>立即提现</view>
+    </view>
+    <view class='mgTop50 mgLeft30'>
+      <view class='fs30 fc-feaa32'>*提现说明</view>
+      <view class='fs30 mgTop15'>提现手续费：根据系统而定</view>
+      <view class='fs30 mgTop15'>提现到账时间：1-3工作日到账，节假日可能有所延迟</view>
+
+    </view>
+  </view>
+</view>
+
+

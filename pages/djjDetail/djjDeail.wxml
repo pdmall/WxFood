@@ -1,0 +1,88 @@
+<view class="w690 mgLeft30 mgTop20 h200 bg-fef5e6" >
+  <view class="h20"></view>
+  <view class="w400 fl">
+    <view  class="mgLeft30 fs36">100元代金券</view>
+    <view class="mgLeft30 mgTop20 fs30 fc-ccc">周一至周五|部分商店可用</view>
+  </view>
+  <!-- <view class="w200 fr">
+    <view class="fs30 fc-fff bg-feb13b mgTop20 w175 h60 lh60 tc bRadius10">立即抢购</view>
+  </view> -->
+  <view class="clearB"></view>
+  <view class="mgLeft30 mgTop20">
+    <text class="fl fs36 ">火锅王</text>
+    
+  </view>
+</view>
+<view class="mgLeft30 mgTop20 fs30">
+  <text decode='true' space='true'>随时退&nbsp;|&nbsp;过期自动退</text>
+  <text class="fr fs26 fc-ccc mgRight30">已售25</text> 
+</view>
+<!-- 温馨提示 -->
+<view class="w690 mgLeft30 fontB fs30 mgTop30">温馨提示</view>
+<view class="w690 mgLeft30 fs30">
+  <view class="mgTop10 fontB">有效期：</view>
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>2018.3.4至2018.6.2（周末、法定节假日通用）</text>
+  </view>
+  <view class="mgTop10 fontB">使用时间：</view>
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>10：00-24：00</text>
+  </view>
+  <view class="mgTop10 fontB">使用规则：</view>
+  <view class="mgTop10">
+    <image class='bg-000 bRadius50 spot' ></image>
+    <text>提前1小时预约！</text>
+  </view>
+</view>
+<!-- 网友评价 -->
+<view class="w690 mgLeft30 fontB fs30 mgTop30">网友评价（200）
+  <view class="w100 fr fc-d1820c">
+    <text decode='true' space='true'>更多&nbsp;</text>
+    <image class=" " style='height:20rpx;width:25rpx;;transform:rotate(90deg);' src="{{upImg}}"></image>
+  </view>
+</view>
+<view class="">
+  <!-- 选择点赞类型 -->
+  <block wx:for="{{dzData}}" wx:for-item="v" wx:key="index">
+    <view class="h40 lh40 fl fc-777 fs30 mgLeft30 border-ccc mgTop30">
+    <text decode="true" space="{{true}}">&nbsp;&nbsp;{{v.dzlx}}({{v.dzNum}})&nbsp;</text>
+  </view>
+  </block>
+</view>
+<view class="clearB"></view>
+<!-- 用户评论数据 -->
+<view class="w720 mgLeft30 mgTop30 btmLine-ccc"></view>
+<view class=" w690 mgLeft30 mgTop30">
+  <image class="fl w85 h85 bRadius50 bg-eee " src="{{v.img}}"></image>
+  <view class="w570 fl mgLeft30 ">
+    <view class="lh50 fs30 fc-666">用户名称
+      <text class="fr">2018-08-22</text>
+    </view>
+    <view class="mgTop5 fs30">
+      <view class="fs30 h40 lh40 fl">评分</view>
+      <image class="w175 h40 bg-000 mgLeft10"  ></image>
+    </view>
+    <view class="lh50 mgTop5 fs30">评价内容对方是飞洒锅广东分公司梵费公司鬼地方个梵蒂冈是电饭锅水电费</view>
+    <!-- 掌柜回复 -->
+    <view class="bg-f8 mgTop15">
+      <view class="h20"></view>
+      <view class="w530 mgLeft20  lh50 fs30 " >
+        <text class="fc-d1820c">掌柜回复：</text>
+        <text>水电费水电费水电费饭发个电饭锅电饭锅地方锅锅</text>
+      </view>
+      <view class="h20"></view>
+    </view>
+  </view>
+  <view class="clearB"></view>
+  <view class="h120"> </view>
+</view> 
+<!-- 底部，立即抢购按钮 -->
+<view class="w750 h100  bottom0 psnF"  >
+  <view class="w550 fl fs36 h100 lh100 bg-34" >
+    <text class="fc-d1820c mgLeft30 fs45" >¥88</text>
+    <text class="fc-ccc fs30 mgLeft10 lineThrough">¥88</text>
+  </view>
+  <view class='fl w200 fs36 fc-fff bg-feaa32 h100 lh100 tc'>立即抢购</view>
+</view>

@@ -1,0 +1,8 @@
+/* pages/my/fenx/fenx.wxss */
+.tops{
+  margin: 0 auto;
+  display: flex;
+}
+.tops>S{
+margin: 0 auto
+}
