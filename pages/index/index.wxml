@@ -1,26 +1,20 @@
 <!-- 顶部搜索部分 -->
 <view class='{{bnshow}}'>
-  <view class="bg-000">
-    <view class="mgLeft30 w690 h120 lh120 psnR">
-      <image class="w50 h50 fl bRadius50 mgTop30" src="{{placeImg}}"></image>
-      <text class="fl fs30 fc-fff mgLeft15" bindtap='addres'>{{address}}</text>
+  <view class="bg-fff">
+    <view class="mgLeft30 w690 h100 lh60 psnR">
+      <image class="w50 h50 fl bRadius50 " src="{{placeImg}}"></image>
+      <text class="fl fs30 fc-000 mgLeft15" bindtap='addres'>{{address}}</text>
       <!-- 搜索输入框 -->
-    
-      <form bindsubmit='search' class='w400 fs30 bg-fff fr mgRight30 mgTop30 bRadius20'>
-        <view class='w440 fs30 bg-fff fr bRadius20'>
+      <view class=' fs30 bg-fff fr'>
+        <input class="fl w485 h60 fs30 mgLeft0 bg-ccc bRadius20" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
+        <!-- 放大镜图片 -->
+        <!-- {{sfxs==true?'db':'dn'}}  -->
+        <button class='w36 btn fr lh36 h36 psnA  right20 mgTop15' form-type='submit'>
+          <image class="w36 lh36 h36 psnA" src="/images/public/serch.png" style='z-index:9999'></image>
 
+        </button>
 
-          <input class="fl w485 h60 fs30 mgLeft0 bg-fff bRadius20" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
-
-          <!-- 放大镜图片 -->
-          <!-- {{sfxs==true?'db':'dn'}}  -->
-          <button class='w36 btn fr lh36 h36 psnA  right20 mgTop15' form-type='submit'>
-            <image class="w36 lh36 h36 psnA" src="{{searchImg}}" style='z-index:9999'></image>
-
-          </button>
-
-        </view>
-      </form>
+      </view>
 
 
     </view>
@@ -105,15 +99,4 @@
   </view>
 
 
-  <view class='tc fs30'>
-
-    <view class='tc mgTop30'>
-      <text>派对mall欢迎你</text>
-    </view>
-    <view class=' tc mgTop30'>
-      <text class='tc'>请微信授权登录后放心使用派对mall</text>
-    </view>
-    <button class='mgTop30 btns' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
-      <image class='w30 h30' src='/images/my/WeChat.png'></image>微信授权登录</button>
-  </view>
 </view>

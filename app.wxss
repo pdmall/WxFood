@@ -1,3 +1,38 @@
+.main_color{
+  background: white
+}
+
+.border_r{
+  border: 1px solid #000000;
+  border-radius: 15rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*             以前代码  */
+
+
 .ov{overflow: hidden}
 /**背景色**/
 .bg-000{background: #000000;}

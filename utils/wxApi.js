@@ -8,11 +8,9 @@ function wxPromisify(fn) {
   return function (obj = {}) {
     return new Promise((resolve, reject) => {
       obj.success = function (res) {
-        //成功
         resolve(res)
       }
       obj.fail = function (res) {
-        //失败
         reject(res)
       }
       fn(obj)
@@ -50,7 +48,7 @@ function wxGetSystemInfo() {
 /**
  * 获取位置信息
  */
-function wxGetLocation(){
+function wxGetLocation() {
   return wxPromisify(wx.getLocation);
 }
 
@@ -93,7 +91,5 @@ module.exports = {
   wxLogin: wxLogin,
   wxGetUserInfo: wxGetUserInfo,
   wxGetSystemInfo: wxGetSystemInfo,
-  wxGet: getRequest,
-  wxPost: postRequest,
   wxGetLocation: wxGetLocation,
 }
