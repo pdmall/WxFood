@@ -5,8 +5,8 @@
       <image class="w50 h50 fl bRadius50 " src="{{placeImg}}"></image>
       <text class="fl fs30 fc-000 mgLeft15" bindtap='addres'>{{address}}</text>
       <!-- 搜索输入框 -->
-      <view class=' fs30 bg-fff fr'>
-        <input class="fl w485 h60 fs30 mgLeft0 bg-ccc bRadius20" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
+      <view class=' fs30 bg-fff fr'>  
+        <input class="fl w485 h60 fs30 mgLeft0 bg-ccc bRadius30" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
         <!-- 放大镜图片 -->
         <!-- {{sfxs==true?'db':'dn'}}  -->
         <button class='w36 btn fr lh36 h36 psnA  right20 mgTop15' form-type='submit'>

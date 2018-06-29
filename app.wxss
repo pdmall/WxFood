@@ -1,13 +1,17 @@
-.main_color{
+.main-color{
   background: white
 }
 
-.border_r{
+.border-r{
   border: 1px solid #000000;
   border-radius: 15rpx;
 }
 
-
+.layout-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 

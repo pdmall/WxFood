@@ -52,39 +52,7 @@ function wxGetLocation() {
   return wxPromisify(wx.getLocation);
 }
 
-/**
- * get方法请求接口
- * url接口地址
- * data 为对象
- */
-function getRequest(url, data) {
-  var getRequest = wxPromisify(wx.request)
-  return getRequest({
-    url: apiUrl + url,
-    method: 'GET',
-    data: data,
-    header: {
-      'Content-Type': 'application/json'
-    }
-  })
-}
 
-/**
- * post方法请求接口
- * url接口地址
- * data 为对象
- */
-function postRequest(url, data) {
-  var postRequest = wxPromisify(wx.request)
-  return postRequest({
-    url: apiUrl + url,
-    method: 'POST',
-    data: data,
-    header: {
-      "content-type": "application/x-www-form-urlencoded"
-    },
-  })
-}
 
 module.exports = {
   wxPromisify: wxPromisify,

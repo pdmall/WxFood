@@ -12,7 +12,6 @@ Page({
     serverFull: app.globalData.serverFull, //满星图片
     serverHalf: app.globalData.serverHalf, //半星图片
     serverNo: app.globalData.serverNo, //无星图片
-
     sfxs: true, //是否显示
     flag: false,
     address: '成都',
@@ -59,7 +58,7 @@ Page({
   },
 
   onLoad: function() {
-
+    app.net.GET
   },
 
   // 获取商铺信息
