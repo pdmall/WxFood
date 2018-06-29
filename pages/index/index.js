@@ -7,7 +7,6 @@ var qqmapsdk;
 Page({
   data: {
     starNum: [0, 1, 2, 3, 4],
-    placeImg: "/images/public/icon-position@3x.png", //位置图片
     searchImg: "/images/public/cate-search@3x.png", //搜索放大镜图片
     serverFull: app.globalData.serverFull, //满星图片
     serverHalf: app.globalData.serverHalf, //半星图片

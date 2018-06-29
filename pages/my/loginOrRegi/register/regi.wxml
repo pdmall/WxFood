@@ -5,6 +5,6 @@
   </form>
   <form bindsubmit="submitIcode">
     <input class="fl border-da1f1d w500 h100 mgTop20" style="color:{{codeColor}};" type="text" name="idcode" value='{{icodevalue}}' bindfocus='clearValueIcode' disabled='{{inputCode}}'></input>
-    <button class="fl w230 tc bg-feaa32 h100 lh100 mgTop20" disabled='{{codeDisabled}}' form-type='submit' bindtap='closeAll'>发送</button>
+    <button class="fl w230 tc bg-feaa32 h100 lh100 mgTop20" disabled='{{codeDisabled}}' form-type='submit'>发送</button>
   </form>
 </view>

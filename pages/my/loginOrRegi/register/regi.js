@@ -34,10 +34,6 @@ Page({
           codeColor: "#000"
         })
       },
-      //input失去焦点
-      closeAll: function(e) {
-        
-      },
       //获取验证码请求
       submitPhone: function(e) {
         var that = this
@@ -47,10 +43,8 @@ Page({
           phonevalue: e.detail.value["phone"],
           inputCode: false
         })
-
-        
         console.log(app.url.getVerCode)
-        
+        //请求后台发送手机短信验证码
         network.GET({
           url: app.url.getVerCode,
           data: {
@@ -102,9 +96,9 @@ Page({
           icodevalue: e.detail.value["idcode"]
         })
         // 验证码验证请求
-
         network.POST({
-          url: app.url.register,
+          //url: app.url.register,
+          url:"http://www.baidu.com",
           data: {
             username: app.globalData.userInfo['nickName'],
             verCode: e.detail.value["idcode"],
@@ -113,11 +107,16 @@ Page({
           },
           success: function (res) {
             console.log(res)
+           wx.setStorageSync("token",res.data['data'])
             wx.showToast({
               title:res.data.message,
-            })
-          }
+            }),
+              wx.navigateTo({
+                url: 'pages/my/my',
+              })
+          },
         })
+        
       },
 
 
