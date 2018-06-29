@@ -1,0 +1,18 @@
+<!-- 规则介绍 -->
+<view class="h220 w690 mgLeft30 mgTop30 border-fce8bd bRadius15">
+  <view class="h200 w650 mgTop15 mgLeft20 "> 
+    <view class="fs30 fc-333 fontB mgTop15">多数派投票规则</view>
+     <block wx:for="{{rules}}" wx:key="index"> 
+      <view class="fs26 fc-666 lh40 ">{{item}}</view>
+    </block> 
+    <!-- <view class="fs26 fc-666 lh40 ">1、每位投票结束后，我们将在投票结果中的少数派中随机产生一位幸运者！</view>
+    <view class="fs26 fc-666 lh40 ">2、幸运者将获得总投票人数的金豆！</view>
+    <view class="fs26 fc-666 lh40 ">3、获得的金豆可以抵扣美食对应的金额！</view>  -->
+  </view>
+</view> 
+
+  <button open-type="getUserInfo" style='padding:1rem; margin:.5rem;' lang="zh_CN" bindgetuserinfo="onGotUserInfo" >请先点击按钮允许授权</button>
+
+
+
+ 

@@ -1,0 +1,64 @@
+<!-- 内容列表 -->
+<view  class="" wx:for="{{data}}" wx:for-item="v" wx:key="index">
+  <!-- <text class="fs26 fontB fc-f53324 fl psnA {{index>0?'top50':'top30'}}" style='transform: rotate(-50deg);left:-10rpx;'>票已投，活动未结束</text> -->
+  <view class="h4 bg-eee mgTop10 {{index > 0 ? 'db' : 'dn'}}"></view>
+  <view class="h13 mgTop30 {{index == 0 ? 'db' : 'dn'}}"></view>
+  <view class="mgTop50">
+    <view class="fc-333 fs30 fontB tc ">{{v.wTitle}}</view>
+    <!-- 活动在进行，显示截至时间 -->
+     <view class="fc-333 fs26 tc mgTop15 {{v.wStatus == 1?'db':'dn'}}">截至时间：{{v.wEndTime}}</view> 
+    <!-- 活动截至，显示投票结束、幸运用户 -->
+     <view class="fc-999 fs26 tc mgTop15 {{v.wStatus == 2?'db':'dn'}}" >投票已结束
+      <text class="">（<text class="fc-f53324">恭喜【{{v.wName}}】成为幸运者，获得{{v.wGold}}金豆</text>）</text>
+    </view> 
+    <view class="fs24 fc-999 mgTop20 tc ">参与人数： <text class="fc-f5b225 fs30">{{v.p1Sum+v.p2Sum}}</text></view>
+    <view class="w690 mgLeft30 mgTop15">
+      <!-- <block wx:for="{{v.img}}" wx:key="index" wx:for-item="sv"> -->
+      <!-- 左边图片1信息  v.wPicture1 -->
+      <view class="psnR fl w335">
+        <view class="clearB"></view>
+        <view class="w335 fl fs30 fc-666 h60 lh60 tc {{v.wStatus == 2 ? 'db' : 'dn'}}">{{v.p1Sum}} </view>
+        <image class="w335 h310 fl bRadius15 " src="{{imgUrl+v.wPicture1}}" data-sftp="{{v.voteType}}" data-status="{{v.wStatus}}" data-typeid="1" data-id="{{v.id}}" bindtap='toupiao'></image>
+        <!-- 参加投票的商品类型图片 -->
+        <image class="w65 h65 psnA zIndex2 left135 bottom030" src="{{v.voteType==1 ?activeImg : norImg}}"></image>
+        <view class="w335 h40 psnA fs20 fc-fff tc left0  zIndex4 bottom026">{{v.picture1Describe
+}}</view>
+        <image class="w86 h86  psnA top0 left0}}" src="{{v.wWiner==1 ? winLeft : ''}}" ></image>
+        <!-- 两种商品PK图片 -->
+        <image class="w105 h105 psnA  zIndex3 left295 bottom110" src="{{pkImg}}"></image>
+      </view>
+      <!-- 右边图片2信息  v.wPicture2 -->
+      <view class="psnR fl w335 mgLeft20">
+        <view class="clearB"></view>
+        <view class="w335 fl fs30 fc-666 h60 lh60 tc {{v.wStatus == 2 ? 'db' : 'dn'}}">{{v.p2Sum}} </view>
+        <image class="w335 h310 fl bRadius15 " src="{{imgUrl+v.wPicture2}}" data-sftp="{{v.voteType}}" data-status="{{v.wStatus}}"  data-typeid="2" data-id="{{v.id}}" bindtap='toupiao'></image>
+        <!-- 参加投票的商品类型图片 -->
+        <image class="w65 h65 psnA zIndex2  left135 bottom030" src="{{v.voteType==2 ?activeImg : norImg}}"></image>
+        <view class="w335 h40 psnA fs20 fc-fff tc left0 zIndex4 bottom026" >{{v.picture2Describe
+}}</view>
+        <image class="w86 h86  psnA top0 right0}}" src="{{v.wWiner==2 ? winRight : ''}}" ></image>
+      </view>
+      <!-- </block> -->
+      <view class="clearB"></view>
+      <!-- 商家信息 、地址、电话-->
+      <view class="fs24 fc-4cb3af mgTop50 tl">{{v.wDescribe}}
+      </view> 
+      <view class="fs24 lh40 fc-4cb3af mgTop20 tl">联系电话：{{v.wPhone}} 
+        <text decode='true' space='true'>&nbsp;&nbsp;地址：{{v.wAddress}}</text>
+      </view> 
+    </view>
+    <!-- 分割线 -->
+    <view class="clearB"></view>
+    <view class="btmLine-eee mgTop20 dn"></view>
+    <!-- 评价 -->
+    <view class="">
+      <view class="w300 h70 fr "  data-id="{{v.id}}" bindtap='pjlb'>
+        <view class="fs30 fc-999 fr mgRight30 mgTop15">评价（{{v.commentSum}}<text class="{{v.commentSum >99 ?'dlb':'dn'}}">+</text>）</view>
+        <image class="w35 h35 fr mgRight15 mgTop20" src="{{pjImg}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="clearB"></view>
+  <!-- <view class="h4 bg-eee mgTop30"></view> -->
+</view> 
+<view class="h20"></view>

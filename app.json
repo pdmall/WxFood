@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/my/loginOrRegi/register/regi",
+    "pages/my/business/business",
+    "pages/my/my",
+    "pages/my/loginOrRegi/min",
     "pages/shop/detail/detail",
     "pages/my/yue/tx/tx",
     "pages/my/yue/yue",
@@ -16,7 +20,6 @@
     "pages/my/help/helpruter/qiangq",
     "pages/my/order/order",
     "pages/my/duihuan/duihuan",
-    "pages/my/my",
     "pages/my/yue/dou",
     "pages/list/list",
     "pages/order/tuik/tuik",
@@ -31,8 +34,17 @@
     "pages/logs/logs",
     "pages/my/yue/yedh/yedh",
     "pages/my/yue/jinddh/jinddh",
+  
     "pages/qhb/qhb",
-    "pages/share/share"
+    "pages/share/share",
+    "pages/show/show",
+    "pages/vote/vote",
+    "pages/pjlb/pjlb",
+    "pages/indexZY/index",
+    "pages/fbpj/fbpj",
+    "pages/logsZY/logs",
+    "pages/index1"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -52,10 +64,16 @@
         "selectedIconPath": "/images/tabbar/index1.png"
       },
       {
-        "pagePath": "pages/voucher/loot/loot",
-        "text": "抢卷",
-        "iconPath": "/images/tabbar/quan.png",
-        "selectedIconPath": "/images/tabbar/quan1.png"
+        "pagePath": "pages/redp/redp",
+        "text": "众享",
+        "iconPath": "/images/my/fd.png",
+        "selectedIconPath": "/images/public/icon-luckyBag@3x.png"
+      },
+      {
+        "pagePath": "pages/show/show",
+        "text": "众愿",
+        "iconPath": "/images/public/icon-source@3x.png",
+        "selectedIconPath": "/images/public/icon-source@3x.png"
       },
       {
         "pagePath": "pages/my/my",

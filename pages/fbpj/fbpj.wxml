@@ -1,0 +1,9 @@
+<!-- 评价内容 -->
+<form bindsubmit='fbpl'>
+  <view class="w690 h310  mgLeft30 mgTop30 bg-fff psnR">
+    <view class="h20"></view>
+    <textarea name="content" class=" w650 h240 fs30 mgLeft20 lh40" maxlength='100' placeholder='写下你此刻想说的话...' bindinput='getCont'></textarea>
+    <view class="fr fs30 psnA right20 bottom15 fc-999">{{num}}/100</view>
+  </view>
+  <button class="w630 h80 bg-f5b225 fs30 fc-fff mgLeft60 mgTop350 xy-center bRadius15" form-type="submit">发表评论</button>
+</form>

@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.94",
+	"libVersion": "2.1.1",
 	"appid": "wx903822fb7d2f3961",
 	"projectname": "meishi",
 	"isGameTourist": false,

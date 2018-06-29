@@ -1,6 +1,6 @@
-// let api = 'http://192.168.0.125:8085/qian/store/'   //测试
+ let api = 'http://120.27.223.110/qian/store/'   //测试
 
-let api = 'https://www.paiduikeji.com/smallcomment/qian/'   //测试
+//let api = 'https://www.paiduikeji.com/smallcomment/qian/'   //测试
 
 function wxRequest(url, cb, data = {}, stu = "get") {
   let method = '';
@@ -78,3 +78,4 @@ module.exports = {
   showToast: showToast,
   wxRequest: wxRequest,
 }
+

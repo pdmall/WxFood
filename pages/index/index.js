@@ -12,7 +12,7 @@ Page({
     serverFull: app.globalData.serverFull, //满星图片
     serverHalf: app.globalData.serverHalf,  //半星图片
     serverNo: app.globalData.serverNo,  //无星图片
-    myImg: '/images/public/mine@3x.png',
+    
     sfxs: true,   //是否显示
     flag: false,
     address: '成都',
@@ -27,7 +27,7 @@ Page({
       { index: 1, img: '/images/public/icon-punchCard@3x.png', text: '天天打卡', appid: 'wx9d82360ba0304046', path: '/pages/index/index' },
       { index: 2, img: '/images/public/icon-luckyBag@3x.png', text: '共享福袋', appid: '', path: '' },
       { index: 3, img: '/images/public/icon-RobStamps@3x.png', text: '会员抢卷', appid: '', path: '' },
-      { index: 4, img: '/images/public/icon-source@3x.png', text: '众愿', appid: 'wxda787e4bfeafe899', path: '/pages/show/show' }
+      { index: 4, img: '/images/public/icon-source@3x.png', text: '众愿', path: '/pages/show/show' }
     ],
   },
   onLoad: function () {
@@ -107,6 +107,34 @@ Page({
         })
       }
     });
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              // 可以将 res 发送给后台解码出 unionId
+              app.globalData.userInfo = res.userInfo
+              // console.log(res)
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (this.userInfoReadyCallback) {
+                this.userInfoReadyCallback(res)
+              }
+            }
+          })
+          
+        }
+      if(res.authSetting['scope.userLocation']){
+        wx.getLocation({
+          success: function(res) {
+            console.log(res)
+            app.globalData.userLocation=res
+          },
+        })
+      }
+      }
+    })
   },
 
   

@@ -123,7 +123,7 @@
 .w300{width: 300rpx;}
 .w350{width: 350rpx;}
 .w400{width: 400rpx;}
-
+.w440{width: 440rpx;}
 .w485{width: 485rpx;}
 .w500{width: 500rpx;}
 .w515{width: 515rpx;}
@@ -142,11 +142,12 @@
 .wth95{width: 95%;}
 .wth85{width: 85%}
 .wth70{width: 70%}
+.wth100{width:100%}
 /**浮动样式**/
 .fl{float: left;}
 .fr{float: right;}
-
 /**左边距**/
+.mgLeft0{margin-left: 0rpx;}
 .mgLeft5{margin-left: 5rpx;}
 .mgLeft10{margin-left: 10rpx;}
 .mgLeft15{margin-left: 15rpx;}
@@ -200,7 +201,8 @@
 .right20{right: 20rpx;}
 .right30{right: 30rpx;}
 .right80{right: 80rpx;}
-.right60{right: 110rpx;}
+.right110{right: 110rpx;}
+.right140{right: 140rpx;}
 .bottom-15{bottom: -15rpx;}
 .bottom0{bottom: 0rpx;}
 .bottom15{bottom: 15rpx;}

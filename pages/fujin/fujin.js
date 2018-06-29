@@ -20,6 +20,10 @@ Page({
     ishow: 'db',
     noshow: 'dn',
     ifshow: false,
+    oneShow: false,
+    twoShow: true,
+    threeShow: false,
+    fourShow: true,
     paix: [{ id: 1, text1: "附近(智能范围内)", text2: "500米", text3: "1000米", text4: "2000米" }, { id: 1, text1: "附近(智能范围内)", text2: "500米", text3: "1000米", text4: "2000米" }, { id: 1, text1: "附近(智能范围内)", text2: "500米", text3: "1000米", text4: "2000米" }],
     // paix: [{ id: 1, data: [{ index: 0, text:  }, { index: 1, text:  }, { index: 2, text: }, { index: 3, text: },] },
     // { id: 2, data: [{ index: 0, text: "" }, { index: 1, text: "小吃快餐" }, { index: 2, text: "火锅" }, { index: 3, text: "川菜" },] },
@@ -37,8 +41,44 @@ Page({
         index: 2, img: '/images/shop/img1.png', shopname: '重庆火锅', price: 88, place: '春熙路', range: '800米', juan: '60代80', tuan: "4人餐288元"
       }
     ],
+    conpon: [
+      {
+        conp: ["五元代金卷\n", "五元代金卷\n", "五元代金卷\n"]
+      },
+    ],
+    conpon2: [
+      {
+        conp2: ["五元团购卷\n", "五元团购卷\n", "五元团购卷\n"]
+      },
+    ]
   },
-
+  checkMore: function () {
+    this.setData({
+      oneShow: true,
+      twoShow: false,
+      threeShow: true,
+      fourShow: true
+    })
+  },
+  closeMore: function () {
+    this.setData({
+      oneShow: false,
+      twoShow: true,
+      threeShow: false
+    })
+  },
+  checkMoreT: function () {
+    this.setData({
+      threeShow: true,
+      fourShow: false
+    })
+  },
+  closeMoreT: function () {
+    this.setData({
+      threeShow: false,
+      fourShow: true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

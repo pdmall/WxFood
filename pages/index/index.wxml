@@ -5,16 +5,16 @@
       <image class="w50 h50 fl bRadius50 mgTop30" src="{{placeImg}}"></image>
       <text class="fl fs30 fc-fff mgLeft15" bindtap='addres'>{{address}}</text>
       <!-- 搜索输入框 -->
-      <image class="fr h60 w60 bRadius50 mgTop30" src='{{myImg}}' bindtap='my'></image>
+    
       <form bindsubmit='search' class='w400 fs30 bg-fff fr mgRight30 mgTop30 bRadius20'>
-        <view class='w400 fs30 bg-fff fr bRadius20'>
+        <view class='w440 fs30 bg-fff fr bRadius20'>
 
 
-          <input class="fl w300 h60 fs30 mgLeft10 bg-fff bRadius20" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
+          <input class="fl w485 h60 fs30 mgLeft0 bg-fff bRadius20" maxlength='30' bindinput='checkVal' placeholder-style='color:#ccc' value='{{form_info}}' onkeyup="clearNoNum(this)" value="{{search}}" name="search" placeholder='请输入关键字'></input>
 
           <!-- 放大镜图片 -->
           <!-- {{sfxs==true?'db':'dn'}}  -->
-          <button class='w36 btn fr lh36 h36 psnA  right60 mgTop15' form-type='submit'>
+          <button class='w36 btn fr lh36 h36 psnA  right20 mgTop15' form-type='submit'>
             <image class="w36 lh36 h36 psnA" src="{{searchImg}}" style='z-index:9999'></image>
 
           </button>

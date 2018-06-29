@@ -22,6 +22,7 @@ Page({
       { index: 8, img: '/images/my/svip@3x.png', text: '超级会员', url: '/pages/my/vip/vip', recordType: '' },
       { index: 9, img: '/images/my/cashCcoupon@3x.png', text: '现金券', url: '', recordType: '' },
       { index: 10, img: '/images/my/help@3x.png', text: '帮助中心', url: '/pages/my/help/help', recordType: '' },
+      { index: 10, img: '/images/my/help@3x.png', text: '成为商家', url: '/pages/my/business/business', recordType: '' },
     ],
     userData: { userIntegral: 0, status: 1, member : 1 }
   }, 
@@ -83,6 +84,12 @@ Page({
     wx.navigateTo({
       url: '/pages/my/yue/dou',
     })
+  },
+  loginOrRegister:function(){
+    wx.navigateTo({
+      url: '/pages/my/loginOrRegi/min',
+    })
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

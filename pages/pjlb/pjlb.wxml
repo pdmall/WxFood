@@ -1,0 +1,26 @@
+
+<view class="h60 lh60 mgTop350 fs30 fc-999 tc {{isHidden}}">暂无评论数据</view>
+<block wx:for="{{pjData}}" wx:for-item="v" wx:key="index">
+  <view class=" w690 mgLeft30 mgTop30">
+    <image class="fl w86 h86 bRadius50 bg-eee mgTop20" src="{{v.cUserPhoto}}"></image>
+    <view class="w570 fl mgLeft30 ">
+      <view class="h50 lh50 fs30">{{v.cUserName}}</view>
+      <view class="h50 lh50 fs30 fc-666">{{v.cTime}}</view>
+      <view class="lh50 fs30">{{v.content}}</view>
+    </view>
+    <view class="clearB"></view>
+    <!-- 显示的点赞数 -->
+    <view class="lh40 mgTop15">
+      <view class=" fr fs26 fc-666">{{v.cNum}}</view>
+      <view class="fr w80 h50">
+        <image class=" fr w35 h35 mgTop7 mgRight10 pd" data-id="{{v.id}}" src="{{v.flag==1?ydzImg:wdzImg}}" bindtap='dianzan'></image>
+      </view>
+    </view>
+  </view>                   
+  <view class="clearB"></view>
+  <view class="btmLine-eee mgTop20"></view>
+</block>
+
+ <view class="h100"></view> 
+<!-- 底部，去评论按钮 -->
+<view class="w750 h100 bg-f5b225 fs30 fc-fff bottom0 xy-center" style='position:fixed' bindtap='pingjia'>去评论</view>

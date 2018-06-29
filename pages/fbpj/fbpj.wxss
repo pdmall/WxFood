@@ -1,0 +1,4 @@
+/* pages/fbpj/fbpj.wxss */
+page{
+  background: #eeeeee;
+}

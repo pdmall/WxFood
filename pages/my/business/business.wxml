@@ -1,0 +1,33 @@
+<view>
+  <form bindsubmit="submitShopInfo">
+    商店名:
+    <input class="border-botm" name="shop_name"></input>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" name="city">
+      <view class="border-botm h100">
+        商店地址：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+    详细地址(请点击地图选择）:
+    <input value='{{shop_address}}' name="shop_address" disabled></input>
+    <map scale="18" class="h600 wth100" longitude='{{longitude}}' latitude='{{latitude}}' show-location bindtap="chooseLocation" markers="{{markers}}"></map>
+    联系电话: <input value='{{shop_phone}}' name="shop_phone"></input>
+
+    <picker name="buss_open" mode="time" value="{{time}}" start="08:00" end="21:01" bindchange="bindOpenTimeChange">
+        <view class="picker">
+         开门时间(24小时制): {{buss_open}}
+        </view>
+      </picker>
+
+  
+    <picker name="buss_close" mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="bindCloseTimeChange">
+        <view class="picker">
+         关门时间(24小时制): {{buss_close}}
+        </view>
+      </picker>
+    营业执照：<text bindtap="chooseImg">点击选择图片</text>
+    <image src="{{license_img}}"name="license_img"></image>
+    
+    <button form-type='submit'>提交审核</button>
+
+  </form>
+</view>

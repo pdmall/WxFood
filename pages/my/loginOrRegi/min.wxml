@@ -1,0 +1,2 @@
+<button class="" bindtap='login'>登陆</button>
+<button class="" bindtap="register">注册</button>

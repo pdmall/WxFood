@@ -1,0 +1,10 @@
+<view>
+  <form bindsubmit="submitPhone">
+    <input class="fl  border-da1f1d w500 h100" style="color:{{color}};" type="number" name="phone" value='{{phonevalue}}' bindfocus='clearValue' disabled='{{inputPhone}}' maxlength="11" ></input>
+    <button class="fl tc w230 bg-feaa32 lh100 h100" form-type='submit' disabled='{{disabled}}'>{{btnvalue}}</button>
+  </form>
+  <form bindsubmit="submitIcode">
+    <input class="fl border-da1f1d w500 h100 mgTop20" style="color:{{codeColor}};" type="text" name="idcode" value='{{icodevalue}}' bindfocus='clearValueIcode' disabled='{{inputCode}}'></input>
+    <button class="fl w230 tc bg-feaa32 h100 lh100 mgTop20" disabled='{{codeDisabled}}' form-type='submit' bindtap='closeAll'>发送</button>
+  </form>
+</view>
