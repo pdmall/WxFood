@@ -1,7 +1,7 @@
 // pages/my/business/business.js
 var app = getApp()
 var network = require("../../../utils/network.js")
-var sss=""
+
 Page({
 
       /**
@@ -48,7 +48,6 @@ Page({
         var that=this
           wx.chooseLocation({
             success: function(res) {
-
               that.setData({
                shop_address: res["address"]+res["name"],
                 latitude:res['latitude'],
@@ -65,27 +64,7 @@ Page({
       },
       //选择营业执照
       chooseImg:function(){
-        var that=this
-        wx.chooseImage({
-          count: 1, // 默认9
-          sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
-          sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-          success: function (res) {
-            // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片        
-            that.setData({
-              license_img: res.tempFilePaths
-            })
-            var tempFilePaths = res.tempFilePaths
-            wx.saveFile({
-              tempFilePath: 'tempFilePaths',
-              success:function(res){
-                console.log(ok)
-              }
-            })
-            
-            
-          }
-        })
+        app.uploadImage(1, app.url.upLoadFilePath)
       },
       //提交审核
       submitShopInfo: function(e) {
@@ -93,7 +72,7 @@ Page({
         console.log(e)
         network.GET({
            url:app.url.shopRegister,
-          //url:"http://www.baidu.com",
+           //url:"http://www.baidu.com",
           data: {
               shop_name:e.detail.value['shop_name'],
               shop_address: e.detail.value['shop_address'],
@@ -104,13 +83,13 @@ Page({
               buss_open:e.detail.value["buss_open"],
               buss_close:e.detail.value["buss_close"],
               latitude: that.data.latitude,
-              longitude:that.data.longitude,
-              
-
+              longitude:that.data.longitude
           },
           success: function(res) {
-
-            
+            console.log(res)
+            wx.showToast({
+              title: '提交成功',
+            })
           },
         })
       },

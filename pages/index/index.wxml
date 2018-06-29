@@ -2,7 +2,7 @@
 <view class='{{bnshow}}'>
   <view class="bg-fff">
     <view class="mgLeft30 w690 h100 lh60 psnR">
-      <image class="w50 h50 fl bRadius50 " src="{{placeImg}}"></image>
+      <image class="w50 h50 fl bRadius50 " src="/images/public/icon-position@3x.png"></image>
       <text class="fl fs30 fc-000 mgLeft15" bindtap='addres'>{{address}}</text>
       <!-- 搜索输入框 -->
       <view class=' fs30 bg-fff fr'>  
@@ -11,12 +11,8 @@
         <!-- {{sfxs==true?'db':'dn'}}  -->
         <button class='w36 btn fr lh36 h36 psnA  right20 mgTop15' form-type='submit'>
           <image class="w36 lh36 h36 psnA" src="/images/public/serch.png" style='z-index:9999'></image>
-
         </button>
-
       </view>
-
-
     </view>
   </view>
   <!-- 小程序列表 -->

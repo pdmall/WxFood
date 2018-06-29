@@ -7,23 +7,12 @@
     </view> -->
   </view>
   <view class="tc psnR" >
-    <image class='w120 h120 bRadius50 bg-fff' src='{{userData.headPortrait}}'></image>
+    <image class='w120 h120 bRadius50 bg-fff' src='{{userIcon}}'></image>
     <image class="psnA w85 h80 {{userData.member ==1 ? 'db': 'dn'}}" style='top:-40rpx;left:400rpx;transform: rotate(10deg);' src="{{vipImg}}"></image>
   </view>
-  <view class="fs30 fc-e4b737 tc mgTop10" style='z-index:22'>{{userData.name}}</view>
-  <view class="fs30 fc-e4b737 tc mgTop10">{{userData.phone}}</view>
-  <view class="fs30 fc-e4b737 tc mgTop10" bindtap='loginOrRegister'>登陆/注册</view>
-  <view class="h120 ">
-    <view class="fl w300 mgTop30 mgLeft30" bindtap='yue'>
-      <view class="fc-fff fs30 tc">钱包余额（元）</view>
-      <view class="fc-e4b737 fs30 tc">{{userData.money}}</view>
-    </view>
-    <view class="bg-fff fl h80 mgTop20 mgLeft50" style='width:3rpx;'></view>
-    <view class="fl w300 mgTop30 mgLeft30" bindtap='dou'>
-      <view class="fc-fff fs30 tc">金豆数量（金豆）</view>
-      <view class="fc-e4b737 fs30 tc">{{userData.userIntegral}}</view>
-    </view>
-  </view>
+  <view class="fs30 fc-e4b737 tc mgTop10" style='z-index:22'>{{name}}</view>
+  <view class="fs30 fc-e4b737 tc mgTop10">{{phone}}</view>
+  <view class="fs30 fc-e4b737 tc  mgTop10" bindtap='loginOrRegister'>登陆/注册</view>
 </view>
 <!-- 其他数据 -->
 <view wx:for="{{myData}}" wx:for-item="v" wx:key="index"> 

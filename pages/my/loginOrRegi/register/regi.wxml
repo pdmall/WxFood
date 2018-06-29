@@ -1,3 +1,4 @@
+
 <view wx:if="{{isAuth}}">
   <input class="fl  border-da1f1d w500 h100" style="color:{{color}};" type="number" name="phone" placeholder='请输入手机号' bindinput='inputEvent' disabled='{{inputPhone}}' maxlength="11"></input>
   <button class="fl tc w230 bg-feaa32 lh100 h100" form-type='submit' disabled='{{disabled}}' bindtap='onGetVerCode'>{{btnvalue}}</button>
