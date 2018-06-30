@@ -1,12 +1,28 @@
+<!--  -->
+<view class="mgTop50" wx:if="{{isAuth}}">
+  <view class="tc">
+    <image class="w150 h150" src="/images/public/paiduiMall.png"></image>
+  </view>
 
-<view wx:if="{{isAuth}}">
-  <input class="fl  border-da1f1d w500 h100" style="color:{{color}};" type="number" name="phone" placeholder='请输入手机号' bindinput='inputEvent' disabled='{{inputPhone}}' maxlength="11"></input>
-  <button class="fl tc w230 bg-feaa32 lh100 h100" form-type='submit' disabled='{{disabled}}' bindtap='onGetVerCode'>{{btnvalue}}</button>
-  <input class="fl border-da1f1d w500 h100 mgTop20"  type="number" name="idcode" placeholder='请输入验证码' maxlength="6"  bindinput='codeEvent' ></input>
-  <button class="w230 tc bg-feaa32 h100 lh100 mgTop20" disabled='{{!sendVerCode}}' form-type='submit' bindtap='onLogin'>发送</button>
+  <input class="border-defult w630 h100 mgAuto mgTop30" style="color:{{color}};" type="number" name="phone" placeholder='请输入手机号' bindinput='inputEvent' disabled='{{inputPhone}}' maxlength="11"></input>
+
+
+  <button class=" w630 lh100 h100 mgTop30 bg-feb13b" form-type='submit' disabled='{{disabled}}' bindtap='onGetVerCode'>{{btnvalue}}</button>
+
+  <input class=" border-defult w630  h100 mgTop30 mgAuto" type="number" name="idcode" placeholder='请输入验证码' maxlength="6" bindinput='codeEvent'></input>
+
+  <button class="w230 w630  h100 lh100 mgTop30 bg-feb13b" disabled='{{!sendVerCode}}' form-type='submit' bindtap='onLogin'>发送</button>
+
 </view>
-<view wx:if="{{!isAuth}}">
-  <text>登陆账号需要获取你的个人信息</text>
-  <button class='mgTop30 btns' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+
+<!--登陆授权界面  -->
+<view class="mgTop200 tc" wx:if="{{!isAuth}}">
+  <!--logo界面  -->
+  <view class="tc">
+    <image class="w200 h200" src="/images/public/paiduiMall.png"></image>
+  </view>
+  <text class="second-color">派对MALL诚心提醒：
+  登陆账号需要获取您的个人信息</text>
+  <button class='mgTop30 w550 ' type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
     微信授权登录</button>
 </view>

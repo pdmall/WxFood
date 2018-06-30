@@ -14,7 +14,7 @@
 <!--排序 -->
 <view class=" " bindtap='showOtherTuangou'>
   <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">附近
-    <image class="w30 h30 mgLeft10 mgTop10 trans90" src="{{rightImg}}"></image>
+    <image class="w30 h30 trans90" src="{{rightImg}}"></image>
   </view>
   <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">美食
     <image class="w30 h30 trans90" src="{{rightImg}}"></image>
