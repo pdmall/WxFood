@@ -16,9 +16,8 @@ Page({
     userPhoneNum: "",
     disabled: true,
     inputPhone: false,
-    inputCode: true,
     verCode:"",
-    codeDisabled: true,
+    sendVerCode: false,//是否发送过验证码
     isAuth: false
   },
   //电话号码 获取焦点
@@ -36,23 +35,8 @@ Page({
   },
 
   codeEvent(e){
-    let len = e.detail.cursor;
-    let inputCode = true
-    if (len > 3) {
-      inputCode = false
-    }
     this.setData({
       verCode: e.detail.value,
-      inputCode: inputCode,
-      color: "#000"
-    })
-  },
-
-  clearValueIcode: function () {
-    this.setData({
-      icodevalue: "",
-      codeDisabled: false,
-      codeColor: "#000"
     })
   },
 
@@ -64,6 +48,9 @@ Page({
     this.onGotUserInfo();
   },
 
+/**
+ * 获取用户信息权限
+ */
   onGotUserInfo() {
     let that = this;
     let wxGetUserInfo = app.wxApi.wxGetUserInfo();
@@ -83,7 +70,7 @@ Page({
   //获取验证码请求
   onGetVerCode: function (e) {
     var that = this
-    app.net.GET({
+    app.net.GetThen({
       url: app.url.getVerCode,
       data: {
         phone: this.data.userPhoneNum
@@ -92,7 +79,7 @@ Page({
       if(res.data.code == 200){
         this.startTime();
         that.setData({
-          inputCode: false
+          sendVerCode:true
         })
       }else{
         wx.showModal({
@@ -110,6 +97,7 @@ Page({
       currentTime--;
       that.setData({
         btnvalue: currentTime + '秒',
+        disabled:true,
         inputPhone: true
       })
       if (currentTime <= 0) {
@@ -125,9 +113,15 @@ Page({
   },
 
 
-  //发送验证码
+  //开始注册
   onLogin: function (e) {
-    app.net.POST({
+    if (this.data.verCode.length < 4) {
+      wx.showToast({
+        title: '验证码有误',
+      })
+      return;
+    }
+    app.net.PostThen({
       url: app.url.register,
       data: {
         username: app.getUserInfo().nickName,
@@ -137,19 +131,14 @@ Page({
       }
     }).then(res => {
       if (res.data.code == 200) {
-        this.startTime();
-        that.setData({
-          inputCode: false
-        })
+        app.setToken(res.data.data);
+        wx.navigateBack()
       } else {
-        console.log(res)
         wx.showToast({
           title: res.data.message,
         })
       }
     })
-
-  
   },
 
  

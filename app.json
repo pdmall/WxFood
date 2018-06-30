@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/my/loginOrRegi/register/regi",
     "pages/index/index",
+    "pages/my/loginOrRegi/register/regi",
     "pages/my/business/business",
     "pages/my/my",
 
