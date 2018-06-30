@@ -196,6 +196,7 @@
 .mgLeft40{margin-left: 40rpx;}
 .mgLeft50{margin-left: 50rpx;}
 .mgLeft60{margin-left: 60rpx;}
+/**清除浮动**/
 .clearfix {
   overflow: auto;
   _height: 1%;

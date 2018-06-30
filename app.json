@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/my/loginOrRegi/register/regi",
+    "pages/fujin/fujin",
     "pages/index/index",
+    "pages/my/loginOrRegi/register/regi",
     "pages/my/business/business",
     "pages/my/my",
     "pages/shop/detail/detail",
@@ -9,7 +10,6 @@
     "pages/my/yue/yue",
     "pages/my/yue/cz/cz",
     "pages/order/order",
-    "pages/fujin/fujin",
     "pages/my/fenx/fenx",
     "pages/my/suggest/suggest",
     "pages/my/vip/vip",

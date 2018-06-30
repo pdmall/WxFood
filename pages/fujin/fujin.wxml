@@ -1,9 +1,9 @@
 <!-- 顶部搜索部分 -->
-<view class="bg-eee">
+<view>
   <view class="mgLeft30 w690 h120 lh120 psnR">
     <!-- 搜索输入框 -->
-    <view class="fl w690 h80 fs30 bg-fff mgTop20 bRadius20">
-      <input class="w550 h80 fs30 mgLeft60" maxlength='30' placeholder='请输入关键字' bindinput='checkVal'></input>
+    <view class="fl w690 h80 fs30 bg-eee mgTop20 bRadius20">
+      <input class="w550 h80 fs30 mgLeft60 " maxlength='30' placeholder='请输入关键字' bindinput='checkVal'></input>
     </view>
     <!-- 放大镜图片 -->
     <image class="w36 h36 psnA top45 left15 {{sfxs==true?'db':'dn'}}" src="{{searchImg}}"></image>
@@ -14,7 +14,7 @@
 <!--排序 -->
 <view class=" " bindtap='showOtherTuangou'>
   <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">附近
-    <image class="w30 h30 trans90" src="{{rightImg}}"></image>
+    <image class="w30 h30 mgLeft10 mgTop10 trans90" src="{{rightImg}}"></image>
   </view>
   <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">美食
     <image class="w30 h30 trans90" src="{{rightImg}}"></image>

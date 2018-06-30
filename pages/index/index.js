@@ -1,3 +1,4 @@
+  var app=getApp()
 Page({
   /**
    * 页面的初始数据
@@ -10,7 +11,7 @@ Page({
     serverNo: app.globalData.serverNo, //无星图片
     sfxs: true, //是否显示
     flag: false,
-    address: '成都',
+    address:'成都',
     shopData: [],
     search: "",
     ishow: 'db',
@@ -21,7 +22,7 @@ Page({
       img: '/images/public/icon-cate@3x.png',
       text: '美食',
       appid: '',
-      path: ''
+      path: '../fujin/fujin'
     },
     {
       index: 1,
@@ -86,6 +87,12 @@ Page({
       path: ''
     },
     ],
+  },
+  navgitoPage:function(){
+    var that=this
+    wx.navigateTo({
+      url: that.data.proData[0].path
+    })
   },
 
 

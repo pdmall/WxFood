@@ -25,10 +25,6 @@ Page({
     threeShow: false,
     fourShow: true,
     paix: [{ id: 1, text1: "附近(智能范围内)", text2: "500米", text3: "1000米", text4: "2000米" }, { id: 1, text1: "附近(智能范围内)", text2: "500米", text3: "1000米", text4: "2000米" }, { id: 1, text1: "附近(智能范围内)", text2: "500米", text3: "1000米", text4: "2000米" }],
-    // paix: [{ id: 1, data: [{ index: 0, text:  }, { index: 1, text:  }, { index: 2, text: }, { index: 3, text: },] },
-    // { id: 2, data: [{ index: 0, text: "" }, { index: 1, text: "小吃快餐" }, { index: 2, text: "火锅" }, { index: 3, text: "川菜" },] },
-    // { id: 3, data: [{ index: 0, text: "智能排序" }, { index: 1, text: "离我最近" }, { index: 2, text: "评价最好" }, { index: 3, text: "价位最高" },] }
-    // ],
     paixuNum: [{ index: 0, text: "附近" }, { index: 1, text: "美食" }, { index: 2, text: "智能排序" }],
     shopData: [
       {
@@ -52,6 +48,7 @@ Page({
       },
     ]
   },
+  //查看更多优惠---卷
   checkMore: function () {
     this.setData({
       oneShow: true,
@@ -60,6 +57,7 @@ Page({
       fourShow: true
     })
   },
+  //关闭更多优惠---卷
   closeMore: function () {
     this.setData({
       oneShow: false,
@@ -67,12 +65,14 @@ Page({
       threeShow: false
     })
   },
+  //查看更多优惠---团
   checkMoreT: function () {
     this.setData({
       threeShow: true,
       fourShow: false
     })
   },
+  //关闭更多优惠---团
   closeMoreT: function () {
     this.setData({
       threeShow: false,
@@ -91,7 +91,6 @@ Page({
       return app.fun.wxApi.wxPost("appuser/decodeUserInfoByMeiShi", data);
     })    //获取用户openid
       .then(res => {
-
         app.fun.common.storage('openid', res.data);
         let wxGetLocation = app.fun.wxApi.wxGetLocation();
         return wxGetLocation();

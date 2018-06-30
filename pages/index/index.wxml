@@ -22,9 +22,9 @@
   </view>
   <!-- 小程序列表 -->
   <view class="clearfix">
-    <view wx:for="{{proData}}" wx:for-item="v" wx:key="index">
+    <view wx:for="{{proData}}" wx:for-item="v" wx:key="index" bindtap="navgitoPage">
       <view class="w120  mgTop20 fl tc {{index>0?'mgLeft20':'mgLeft30'}}">
-        <image class="w85 h85 bRadius50" src="{{v.img}}" data-index="{{index}}" data-path="{{v.path}}"></image>
+        <image class="w85 h85 bRadius50" src="{{v.img}}" data-index="{{index}}" datai-path="{{v.path}}"></image>
         <view class='fs26 tc mgTop10'>{{v.text}}</view>
       </view>
     </view>
