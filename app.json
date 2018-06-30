@@ -1,15 +1,15 @@
 {
   "pages": [
-
-    "pages/index/index",
     "pages/my/loginOrRegi/register/regi",
+    "pages/index/index",
+    "pages/fujin/fujin",
     "pages/my/business/business",
     "pages/my/my",
     "pages/shop/detail/detail",
     "pages/my/yue/tx/tx",
     "pages/my/yue/yue",
     "pages/my/yue/cz/cz",
-    "pages/fujin/fujin",
+  
     "pages/order/order",
     "pages/my/fenx/fenx",
     "pages/my/suggest/suggest",
