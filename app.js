@@ -26,7 +26,11 @@ App({
   },
 
   getToken() {
-    return wx.getStorageInfoSync("token");
+    return wx.getStorageSync("token")
+  },
+
+  setToken(token) {
+    wx.setStorageSync("token", token);
   },
 
   setUserInfo(userInfo){
@@ -39,5 +43,6 @@ App({
 
   net: network,
   wxApi: wxApi,
+
 
 })
