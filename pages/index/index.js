@@ -3,6 +3,19 @@ Page({
    * 页面的初始数据
    */
   data: {
+    starNum: [0, 1, 2, 3, 4],
+    searchImg: "/images/public/cate-search@3x.png", //搜索放大镜图片
+    serverFull: app.globalData.serverFull, //满星图片
+    serverHalf: app.globalData.serverHalf, //半星图片
+    serverNo: app.globalData.serverNo, //无星图片
+    sfxs: true, //是否显示
+    flag: false,
+    address: '成都',
+    shopData: [],
+    search: "",
+    ishow: 'db',
+    noshow: 'dn',
+    shouquan: 'db',
     proData: [{
       index: 0,
       img: '/images/public/icon-cate@3x.png',
@@ -75,13 +88,13 @@ Page({
     ],
   },
 
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

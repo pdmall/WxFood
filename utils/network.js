@@ -34,15 +34,15 @@ function sortJ(a, b) {
 
 //GET请求  
 function GET(requestHandler) {
-  request('GET', requestHandler)
+  return request('GET', requestHandler)
 }
 //POST请求  
 function POST(requestHandler) {
-  request('POST', requestHandler)
+  return request('POST', requestHandler)
 }
 
 function request(method,requestHandler) {
-  httpsPromisify(wx.request)({
+  return httpsPromisify(wx.request)({
     url: requestHandler.url,
     data: requestHandler.data,
     header: {

@@ -14,6 +14,7 @@ App({
     shopRegister: service + "shop/addShop",
     upLoadFilePath: upload
   },
+  
 
   globalData: {
     userLocation: null,
@@ -26,6 +27,14 @@ App({
 
   getToken() {
     return wx.getStorageInfoSync("token");
+  },
+
+  setUserInfo(userInfo){
+    this.userInfo = userInfo
+  },
+
+  getUserInfo() {
+    return this.userInfo
   },
 
   net: network,
