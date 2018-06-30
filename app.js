@@ -12,6 +12,10 @@ App({
     getVerCode: service + "user/getVerCode",
     register: service + "user/register",
     shopRegister: service + "shop/addShop",
+    getShopList: service +"shop/getShopList",
+    getAllShopType: service + "shop/getAllShopType",
+    searchShop: service + "shop/search",
+    getHomeBanner: service +"banner/getHomeBanner",
     upLoadFilePath: upload
   },
   
@@ -20,9 +24,9 @@ App({
     userLocation: null,
     userInfo: null,
     imgUrl: "https://www.paiduikeji.com",
-    serverFull: "/images/public/fullStar.jpg", //满星图片
-    serverHalf: "/images/public/halfStar.jpg", //半星图片
-    serverNo: "/images/public/noneStar.jpg", //无星图片
+    serverFull: "/images/public/bigFullStars@2x.png", //满星图片
+    serverHalf: "/images/public/bigHalfStars@2x.png", //半星图片
+    serverNo: "/images/public/bigNoStars@2x.png", //无星图片
   },
 
   getToken() {

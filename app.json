@@ -1,7 +1,8 @@
 {
   "pages": [
-
     "pages/index/index",
+    "pages/start/start",
+    "pages/index/searchShop/searchShop",
     "pages/my/loginOrRegi/register/regi",
     "pages/my/business/business",
     "pages/my/my",
