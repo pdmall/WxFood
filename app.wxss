@@ -98,7 +98,7 @@
 /**隐藏或显示**/
 .dn{display: none;}
 .db{display: block;}
-
+.df{display: flex;}
 /**定位**/
 .psnA{position: absolute;}
 .psnR{position: relative;}
@@ -185,6 +185,7 @@
 /**浮动样式**/
 .fl{float: left;}
 .fr{float: right;}
+.fn{float:none}
 /**左边距**/
 .mgLeft0{margin-left: 0rpx;}
 .mgLeft5{margin-left: 5rpx;}
@@ -195,7 +196,10 @@
 .mgLeft40{margin-left: 40rpx;}
 .mgLeft50{margin-left: 50rpx;}
 .mgLeft60{margin-left: 60rpx;}
-
+.clearfix {
+  overflow: auto;
+  _height: 1%;
+}
 /**右边距**/
 .mgRight20{margin-right: 20rpx;}
 .mgRight30{margin-right: 30rpx;}
