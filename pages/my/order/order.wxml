@@ -1,5 +1,5 @@
 <!-- 条件筛选 -->
-<view class=' w690 mgLeft30 h100 lh100 bg-fff fs30'>
+<view class=' w690 mgLeft30 h100 lh100 bg-fff small-font'>
   <block wx:for="{{lxData}}" wx:for-item="v" wx:key="index">
     <view class="w135 mgLeft30 fl tc" data-idx="{{index}}" data-lx="{{v.lx}}" bindtap='xuanze'>
       <text class="{{v.sfxz == 'yes' ? 'fc-d1820c' : ''}}">{{v.tname}}</text>
@@ -18,27 +18,27 @@
       </view>
       <!-- 商品信息 -->
     <view class="fl w515">
-      <view class="fontB fs30">火锅王
+      <view class="fontB small-font">火锅王
         <view class="fr fc-d1820c">待消费</view>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         <text decode="true" space="{{true}}">时间：18:30</text>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         <text decode="true" space="{{true}}">数量：12</text>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         <text decode="true" space="{{true}}">总价：¥123元</text>
       </view>
     </view>
     <view class="clearB"></view>
     <!-- 下单时间、订单编号 -->
-    <view class="h40 lh40 fs30 fc-777 mgTop10">下单时间：2018-08-22 18:22:30</view>
-    <view class="h40 lh40 fs30 fc-777">订单编号：DDbb123456</view>
+    <view class="h40 lh40 small-font fc-777 mgTop10">下单时间：2018-08-22 18:22:30</view>
+    <view class="h40 lh40 small-font fc-777">订单编号：DDbb123456</view>
   </view>
 </view>
 <view class="btmLine-ccc mgTop40"></view>
-<view class="h100 lh100 fs30">
+<view class="h100 lh100 small-font">
   <text class="fr mgRight30 mgTop20 w150 h60 lh60 tc fc-d1820c border-d1820c bRadius10">查看劵码</text>
   <text class="fr mgRight30 mgTop20 w150 h60 lh60 tc fc-da1f1d border-da1f1d bRadius10" bindtap='tuik'>申请退款</text>
 </view>
@@ -52,25 +52,25 @@
       </view>
       <!-- 商品信息 -->
     <view class="fl w515 psnR">
-      <view class="fontB fs30">火锅王
+      <view class="fontB small-font">火锅王
         <view class="fr fc-d1820c">待消费</view>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         <text decode="true" space="{{true}}">时间：18:30</text>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         <text decode="true" space="{{true}}">数量：12</text>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         <text decode="true" space="{{true}}">总价：¥123元</text>
       </view>
       <!-- 评价 -->
-      <text class="psnA right0 bottom0 w150 h60 lh60 tc fs30 fc-d1820c border-d1820c bRadius10">评价</text>
+      <text class="psnA right0 bottom0 w150 h60 lh60 tc small-font fc-d1820c border-d1820c bRadius10">评价</text>
     </view>
     <view class="clearB"></view>
     <!-- 下单时间、订单编号 -->
-    <view class="h40 lh40 fs30 fc-777 mgTop10">下单时间：2018-08-22 18:22:30</view>
-    <view class="h40 lh40 fs30 fc-777">订单编号：DDbb123456</view>
+    <view class="h40 lh40 small-font  mgTop10">下单时间：2018-08-22 18:22:30</view>
+    <view class="h40 lh40 small-font ">订单编号：DDbb123456</view>
     
   </view>
 </view>

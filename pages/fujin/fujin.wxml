@@ -2,24 +2,24 @@
 <view>
   <view class="mgLeft30 w690 h120 lh120 psnR">
     <!-- 搜索输入框 -->
-    <view class="fl w690 h80 fs30 bg-eee mgTop20 bRadius20">
-      <input class="w550 h80 fs30 mgLeft60 " maxlength='30' placeholder='请输入关键字' bindinput='checkVal'></input>
+    <view class="fl w690 h80 xsmall-font bg-eee mgTop20 bRadius20">
+      <input class="w550 h80 xsmall-font mgLeft60 " maxlength='30' placeholder='请输入关键字' bindinput='checkVal'></input>
     </view>
     <!-- 放大镜图片 -->
     <image class="w36 h36 psnA top45 left15 {{sfxs==true?'db':'dn'}}" src="{{searchImg}}"></image>
-    <view class="h60 lh60 w60  psnA fc-feaa32 fs30 top30 right20">搜索</view>
+    <view class="h60 lh60 w60  psnA fc-feaa32 xsmall-font top30 right20">搜索</view>
   </view>
 </view>
 <!--排序 -->
 <!--排序 -->
 <view class=" " bindtap='showOtherTuangou'>
-  <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">附近
+  <view class="h80 lh80  wth33 fl tc xsmall-font fc-666 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">附近
     <image class="w30 h30 trans90" src="{{rightImg}}"></image>
   </view>
-  <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">美食
+  <view class="h80 lh80  wth33 fl tc xsmall-font fc-666 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">美食
     <image class="w30 h30 trans90" src="{{rightImg}}"></image>
   </view>
-  <view class="h80 lh80  wth33 fl tc fs30 fc-666 {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">智能排序
+  <view class="h80 lh80  wth33 fl tc xsmall-font fc-666 {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">智能排序
     <image class="w30 h30 trans90" src="{{rightImg}}"></image>
   </view>
 </view>
@@ -52,7 +52,7 @@
 <!-- 分割线 -->
 <view class="w690 mgLeft30 btmLine-ccc"></view>
 <block wx:for="{{paix}}" wx:for-item="v" wx:key="index">
-  <view class='h60 lh60   w690 mgLeft30 fs26 btmLine-ccc ' style='display:{{dispaly}}'>{{xq}}</view>
+  <view class='h60 lh60   w690 mgLeft30 xsmall-font btmLine-ccc ' style='display:{{dispaly}}'>{{v.text}}</view>
 </block>
 
 <block wx:for="{{shopData}}" wx:for-item="v" wx:key="index">
@@ -62,44 +62,44 @@
 
     <!-- 店家图片 -->
     <view class="h310 w175 fl" data-url="{{v.url}}" data-id="{{v.id}}" bindtap='shopInfo'>
-      <image class="w145 h145 bg-000" src="{{v.sPhoto}}"></image>
+      <image class="w145 h145 bg-000" src="{{v.img}}"></image>
     </view>
 
     <!-- 店家信息 -->
     <view class="fl w515 h310 ">
-      <view class="fontB fs30" data-url="{{v.url}}" data-id="{{v.id}}" bindtap='shopInfo'>{{v.sName}}</view>
+      <view class="fontB xsmall-font" data-url="{{v.url}}" data-id="{{v.id}}" bindtap='shopInfo'>{{v.shopname}}</view>
       <view class="">
         <block wx:for="{{starNum}}" wx:key="index">
           <image class="w40 h40 {{index>0?'mgLeft5':''}}" src="{{v.sLevel>item*2? v.sLevel>item*2+1? serverFull : serverHalf : serverNo}}"></image>
         </block>
-        <text class="fs26 mgLeft30">¥{{v.sAverage}}/人</text>
+        <text class="xsmall-font mgLeft30">¥{{v.price}}/人</text>
       </view>
-      <view class="fc-666 fs26">
+      <view class="fc-666 xsmall-font">
         {{v.place}}
         <text decode="true" space="{{true}}">&nbsp;&nbsp;四川火锅</text>
-        <text class="fr">{{v.sDistance}}m</text>
+        <text class="fr">{{v.range}}m</text>
       </view>
 
       <view class="w515 btmLine-ccc mgTop10"></view>
       <!-- 卷、团 -->
       <view class="h60 mgTop10">
-        <view class="w40 h40 lh40 fs30 fl fc-fff bg-feaa32 tc mgTop10">卷</view>
+        <view class="w40 h40 lh40 xsmall-font fl defult-color bg-feaa32 tc mgTop10">卷</view>
         <block wx:for="{{conpon}}" wx:for-item="k" wx:key="index">
           <view class="w250 tc  mgLeft60 p0" wx:if="{{k.conp}}>3">
-            <text class="fc-666 fs26  p0" hidden='{{oneShow}}' bindtap='checkMore'>{{k.conp[0]}}</text>
+            <text class=" xsmall-font  p0" hidden='{{juanShow}}' bindtap='checkMore'>{{k.conp[0]}}</text>
             <block wx:for="{{k.conp}}" wx:for-item="item" wx:key="index">
-              <text class="fc-666 fs26   p0" hidden='{{twoShow}}' bindtap='closeMore'>{{item}}</text>
+              <text class="xsmall-font   p0" hidden='{{juanClose}}' bindtap='closeMore'>{{item}}</text>
             </block>
           </view>
         </block>
       </view>
       <view class="h60 ">
-        <view class="w40 h40 lh40 fs30 fl fc-fff bg-ff6633 tc mgTop10">团</view>
+        <view class="w40 h40 lh40 xsmall-font fl defult-color bg-ff6633 tc mgTop10">团</view>
         <block wx:for="{{conpon2}}" wx:for-item="k" wx:key="index">
           <view class="w250 tc mgLeft60 p0" wx:if="{{k.conp2}}>3">
-            <text class="fc-666 fs26  p0" hidden='{{threeShow}}' bindtap='checkMoreT'>{{k.conp2[0]}}</text>
+            <text class=" xsmall-font  p0" hidden='{{tuanShow}}' bindtap='checkMoreT'>{{k.conp2[0]}}</text>
             <block wx:for="{{k.conp2}}" wx:for-item="item" wx:key="index">
-              <text class="fc-666 fs26  p0" hidden='{{fourShow}}' bindtap='closeMoreT'>{{item}}</text>
+              <text class=" xsmall-font  p0" hidden='{{tuanClose}}' bindtap='closeMoreT'>{{item}}</text>
             </block>
           </view>
         </block>

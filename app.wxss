@@ -31,7 +31,8 @@
 .tl{text-align: left;}
 /**背景色 可以用于按钮颜色**/
 .bg-000{background: #000000;}/*黑色*/
-.bg-ccc{background: #cccccc;}/*灰色*/
+.bg-ccc{background: #cccccc;}/*深灰色*/
+.bg-eee{background: #eeeeee;}/*浅灰色*/
 .bg-fff{background: #ffffff;}/*白色*/
 .bg-34{background: #343434;} /*棕黑色*/
 .bg-feaa32{background: #feaa32;} /*橙色*/

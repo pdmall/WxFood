@@ -19,10 +19,10 @@ Page({
     ishow: 'db',
     noshow: 'dn',
     ifshow: false,
-    oneShow: false,
-    twoShow: true,
-    threeShow: false,
-    fourShow: true,
+    juanShow: false,
+    juanClose: true,
+    tuanShow: false,
+    tuanClose: true,
     paix: [{
       id: 1,
       text1: "附近(智能范围内)",
@@ -30,13 +30,13 @@ Page({
       text3: "1000米",
       text4: "2000米"
     }, {
-      id: 1,
+      id: 2,
       text1: "附近(智能范围内)",
       text2: "500米",
       text3: "1000米",
       text4: "2000米"
     }, {
-      id: 1,
+      id: 3,
       text1: "附近(智能范围内)",
       text2: "500米",
       text3: "1000米",
@@ -96,29 +96,29 @@ Page({
   },
   checkMore: function() {
     this.setData({
-      oneShow: true,
-      twoShow: false,
-      threeShow: true,
-      fourShow: true
+      juanShow: true,
+      juanClose: false,
+      tuanShow: true,
+      tuanClose: true
     })
   },
   closeMore: function() {
     this.setData({
-      oneShow: false,
-      twoShow: true,
-      threeShow: false
+      juanShow: false,
+      juanClose: true,
+      tuanShow: false
     })
   },
   checkMoreT: function() {
     this.setData({
-      threeShow: true,
-      fourShow: false
+      tuanShow: true,
+      tuanClose: false
     })
   },
   closeMoreT: function() {
     this.setData({
-      threeShow: false,
-      fourShow: true
+      tuanShow: false,
+      tuanClose: true
     })
   },
   /**

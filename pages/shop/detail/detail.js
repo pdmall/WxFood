@@ -116,7 +116,7 @@ Page({
   */
   buyVoucher: function (e) {
     let that = this
-    
+  
     let id = e.currentTarget.dataset.id
     let token = app.fun.common.getStorage("token")
     console.log(id)
