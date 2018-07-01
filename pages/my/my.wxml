@@ -1,12 +1,12 @@
 <!-- 账号、头像、余额 -->
 <view class=" bg-000">
-  <view class="h60 tl" >
+  <view class="h60 tl">
     <!-- 编辑用户信息 -->
     <!-- <view class="w85 h60 fl mgLeft30" bindtap='editUser'>
       <image class='w50 h50  mgLeft20' src="{{editImg}}"></image>
     </view> -->
   </view>
-  <view class="tc psnR" >
+  <view class="tc psnR">
     <image class='w120 h120 bRadius50 bg-fff' src='{{userIcon}}'></image>
     <image class="psnA w85 h80 {{userData.member ==1 ? 'db': 'dn'}}" style='top:-40rpx;left:400rpx;transform: rotate(10deg);' src="{{vipImg}}"></image>
   </view>
@@ -15,12 +15,12 @@
   <view class="fs30 fc-e4b737 tc  mgTop10" bindtap='loginOrRegister'>登陆/注册</view>
 </view>
 <!-- 其他数据 -->
-<view wx:for="{{myData}}" wx:for-item="v" wx:key="index"> 
+<view wx:for="{{myData}}" wx:for-item="item" wx:key="index">
   <view class="btmLine-ccc mgTop20 {{index>0?'db':'dn'}}"></view>
-  <view class="w690 mgLeft30 mgTop20" data-url="{{v.url}}" data-type="{{v.recordType}}" bindtap='toPage'>
-    <image class="w50 h50 fl" src="{{v.img}}"></image>
-    <text class="fs30" decode='true' space="true">&nbsp;&nbsp;&nbsp;{{v.text}}</text>
-    <image class="w30 h36 fr mgTop5"  src="{{rightImg}}"></image>
+  <view class="w690 mgLeft30 mgTop20" data-url="{{item.url}}" data-type="{{item.recordType}}" bindtap='toPage'>
+    <image class="w50 h50 fl" src="{{item.img}}"></image>
+    <text class="fs30" decode='true' space="true">&nbsp;&nbsp;&nbsp;{{item.text}}</text>
+    <image class="w30 h36 fr mgTop5" src="{{rightImg}}"></image>
   </view>
 </view>
 <view class="h30"></view>

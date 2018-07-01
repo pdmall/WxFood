@@ -2,6 +2,7 @@
 <view class='{{bnshow}}'>
   <view class="bg-fff">
     <view class="mgLeft30 w690 h100 lh60 psnR">
+<<<<<<< HEAD
       <image class="w50 h50 fl bRadius50 " src="/images/public/icon-position@3x.png"></image>
       <text class="fl small-font fc-000 mgLeft15">{{address}}</text>
       <!-- 搜索输入框 -->
@@ -11,6 +12,14 @@
         <button class='w36 btn fr lh36 h36 psnA  right20 mgTop15' form-type='submit'>
           <image class="w36 lh36 h36 psnA" src="/images/public/serch.png" style='z-index:9999'></image>
         </button>
+=======
+      <image class="w50 h50 fl bRadius50 " src="/images/public/icon-position@3x.png" bindtap='address'></image>
+      <text class="fl fs30 fc-000 mgLeft15" bindtap='address'>{{address}}</text>
+      <!-- 搜索输入框 -->
+      <view class=' fs30 bg-fff fr'>
+        <view class="fl w485 h60 fs30 mgLeft0 bg-eee bRadius20 " name="search" bindtap='gotoserach' >请输入关键字</view>
+        <image class="fr w36 lh36 h36 psnA right20 mgTop15" src="/images/public/serch.png" style='z-index:9999'></image>
+>>>>>>> 5bef381a1f009886a85e0eb3c95f28b2e6703276
       </view>
     </view>
   </view>
@@ -32,11 +41,16 @@
   <!-- 分割线 -->
   <view class="w690  mgLeft30 mgTop50 btmLine-ccc"></view>
   <!--热门推荐  -->
+<<<<<<< HEAD
   <view class="h80 lh80 tc small-font ">
     <text  decode="true" >-&nbsp;热门推荐&nbsp;-</text>
+=======
+  <view class="h80 lh80 tc fs30 ">
+    <text decode="true">-&nbsp;热门推荐&nbsp;-</text>
+>>>>>>> 5bef381a1f009886a85e0eb3c95f28b2e6703276
   </view>
   <!--商家展示  -->
-   
+
   <view class='{{noshow}} mgTop200 xy-center'>
     <text class='small-font tc'>附近没有合适的店铺，
   </text>

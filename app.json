@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+
+    "pages/start/start",
+    "pages/index/searchShop/searchShop",
+
     "pages/my/loginOrRegi/register/regi",
     "pages/fujin/fujin",
     "pages/my/business/business",
@@ -9,7 +13,6 @@
     "pages/my/yue/tx/tx",
     "pages/my/yue/yue",
     "pages/my/yue/cz/cz",
-  
     "pages/order/order",
     "pages/my/fenx/fenx",
     "pages/my/suggest/suggest",
