@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-
-    "pages/start/start",
     "pages/index/searchShop/searchShop",
+    "pages/index/index",
+    "pages/start/start",
+
 
     "pages/my/loginOrRegi/register/regi",
     "pages/fujin/fujin",
